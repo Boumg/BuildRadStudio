@@ -1,0 +1,72 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{C1580DAE-9501-48A4-826E-3395707E04D9}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="TstLib\TstLib.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="TstPackageExec\TstPackageExec.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="TstPackageIde\TstPackageIde.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="TstExe\TsstExe.cbproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="TstLib">
+        <MSBuild Projects="TstLib\TstLib.cbproj"/>
+    </Target>
+    <Target Name="TstLib:Clean">
+        <MSBuild Projects="TstLib\TstLib.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TstLib:Make">
+        <MSBuild Projects="TstLib\TstLib.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="TstPackageExec">
+        <MSBuild Projects="TstPackageExec\TstPackageExec.cbproj"/>
+    </Target>
+    <Target Name="TstPackageExec:Clean">
+        <MSBuild Projects="TstPackageExec\TstPackageExec.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TstPackageExec:Make">
+        <MSBuild Projects="TstPackageExec\TstPackageExec.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="TstPackageIde">
+        <MSBuild Projects="TstPackageIde\TstPackageIde.cbproj"/>
+    </Target>
+    <Target Name="TstPackageIde:Clean">
+        <MSBuild Projects="TstPackageIde\TstPackageIde.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TstPackageIde:Make">
+        <MSBuild Projects="TstPackageIde\TstPackageIde.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="TsstExe">
+        <MSBuild Projects="TstExe\TsstExe.cbproj"/>
+    </Target>
+    <Target Name="TsstExe:Clean">
+        <MSBuild Projects="TstExe\TsstExe.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TsstExe:Make">
+        <MSBuild Projects="TstExe\TsstExe.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="TstLib;TstPackageExec;TstPackageIde;TsstExe"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="TstLib:Clean;TstPackageExec:Clean;TstPackageIde:Clean;TsstExe:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="TstLib:Make;TstPackageExec:Make;TstPackageIde:Make;TsstExe:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

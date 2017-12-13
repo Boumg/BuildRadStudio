@@ -1,0 +1,24 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <Defines>_DEBUG;BOOST_SPIRIT_USE_PHOENIX_V3=1;$(Defines)</Defines>
+        <BCC_EnableBatchCompilation>false</BCC_EnableBatchCompilation>
+        <DCC_HppOutputARM>true</DCC_HppOutputARM>
+        <DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
+        <_TCHARMapping>wchar_t</_TCHARMapping>
+        <BCC_OptimizeForSize>false</BCC_OptimizeForSize>
+        <BCC_OptimizeForSpeed>false</BCC_OptimizeForSpeed>
+        <BCC_DisableOptimizations>true</BCC_DisableOptimizations>
+        <UsingDelphiRTL>true</UsingDelphiRTL>
+        <BCC_SelectedOptimizations>false</BCC_SelectedOptimizations>
+        <BCC_UseClassicCompiler>false</BCC_UseClassicCompiler>
+        <DynamicRTL>true</DynamicRTL>
+    </PropertyGroup>
+    <ProjectExtensions>
+        <Borland.Personality>CPlusPlusBuilder.Personality.12</Borland.Personality>
+        <Borland.ProjectType>OptionSet</Borland.ProjectType>
+        <BorlandProject>
+            <CPlusPlusBuilder.Personality/>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+</Project>
