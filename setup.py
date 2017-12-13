@@ -22,7 +22,7 @@ setup(
     # python recursivement dans le dossier courant.
     # C'est pour cette raison que l'on a tout mis dans un seul dossier:
     # on peut ainsi utiliser cette fonction facilement
-    packages=find_packages(exclude=[ 'jeux', 'tests']),,
+    packages=find_packages(exclude=[ 'jeux', 'tests']),
  
     # votre pti nom
     author="BoumG",
