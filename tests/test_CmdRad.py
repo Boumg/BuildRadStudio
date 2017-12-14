@@ -1,5 +1,5 @@
 #-*- coding: utf-8 -*-
-from context import *
+from .context import *
 from buildradstudio.CmdRad import CmdRad 
 
 

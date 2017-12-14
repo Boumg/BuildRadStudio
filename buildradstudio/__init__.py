@@ -7,12 +7,11 @@
  
 __version__ = "0.0.1"
  
-""""
-from Options import OptionBuild
-from BuildProjet import BuildProjet
+from .Options import OptionBuild
+from .Process import Process
 
 
-def Process(racine, groupes):
+def Process(racine=None, groupes=[]):
     option= OptionBuild()     
     # Type de projets/ packages  
     selecs= lambda projet  :   projet.lower() in option.TypeProjets 
@@ -20,7 +19,8 @@ def Process(racine, groupes):
     plateformes= lambda plateforme :    plateforme.lower() in option.Plateformes 
     configs= lambda config :    config.lower() in option.Configs 
     properties= lambda property : property.lower() in option.Properties
+    """
     for g in groupes:
         b=BuildProjet(racine,g[0],g[1] ) 
         b.processGroup(selecs, targets, plateformes, configs, properties 
-"""
+    """
