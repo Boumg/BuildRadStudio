@@ -1,6 +1,10 @@
 #-*- coding: utf-8 -*-
-
-from context import *
+import unittest
+from jeux import *
+import sys
+for f in sys.path:
+    print(f)
+#from context import *
 from buildradstudio.IdProjet import * 
 
 class TestExtRadStudioProjet(unittest.TestCase):
@@ -9,7 +13,7 @@ class TestExtRadStudioProjet(unittest.TestCase):
         with self.assertRaises(Exception):
            ExtRadStudioProjet.getEext("groupproddj")
         with self.assertRaises(Exception):
-           ExtRadStudioProjet.getEext("monfichier.groupproddj")
+           ExtRadStudioProjet.getEext("monfichier.groupproddj") 
 
 
 class TestIdProjet(unittest.TestCase):

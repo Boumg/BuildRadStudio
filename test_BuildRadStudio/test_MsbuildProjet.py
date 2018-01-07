@@ -1,6 +1,8 @@
 #-*- coding: utf-8 -*-
 
-from context import *
+import unittest
+from jeux import *
+
 import os
 from buildradstudio.CmdRad import CmdRad#todo a sup
 from buildradstudio.MsbuildProjet import ProjetMsbuild 

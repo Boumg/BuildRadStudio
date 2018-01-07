@@ -1,6 +1,5 @@
 #-*- coding: utf-8 -*-
-
-from context import *
+import unittest
 from buildradstudio.Embarcadero import * 
 
 

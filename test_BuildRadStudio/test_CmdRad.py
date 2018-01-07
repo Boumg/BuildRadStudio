@@ -1,8 +1,14 @@
 #-*- coding: utf-8 -*-
-from .context import *
-from buildradstudio.CmdRad import CmdRad 
 
 
+
+
+
+import unittest
+
+
+
+from buildradstudio.CmdRad import CmdRad
 
 class TestCmdRad(unittest.TestCase):
     @classmethod
@@ -26,7 +32,5 @@ class TestCmdRad(unittest.TestCase):
         r=self.cmd.ResolutionEnv("%COMPUTERNAME%")
         self.assertGreater(len(r),0)
     
-
-
 if __name__ == '__main__':
-    unittest.main()
+     unittest.main()

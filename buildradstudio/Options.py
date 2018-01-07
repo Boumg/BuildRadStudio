@@ -26,10 +26,10 @@ Options de selection des fichiers projets Rad studio
         --release -r  compilation limitee à la configuration release
         Pas d'indiquation, compilation de toutes les configurations
     Type de projets/ packages
-        --excecution -e  compilation des librairies et des packages executions
+        --excecution -e compilation des librairies et des packages executions
         --conception -c compilation et installation des packages de conception pour ide
-        --test       -t  compilation  des programmes de tests
-        --appli      -a   compilation des executables 
+        --test       -t compilation  des programmes de tests
+        --appli      -a ccompilation des executables 
         Pas d'indiquation, compilation de tous les projets
         
     Proprietes
@@ -38,8 +38,8 @@ Options de selection des fichiers projets Rad studio
     Nota: Pas de build des packages de conception en x64 
 
 """)
-   
-    def __lectureOption(self):
+
+    def __lectureOption(self,listopt):
             if self._silecture :
                 return
             self._silecture = True 
@@ -52,7 +52,7 @@ Options de selection des fichiers projets Rad studio
             self._Properties = []
  
             try:
-                opts, args = getopt.getopt(sys.argv[1:], "hlbiudrectamv", ["help","clean", "build", "install","uninstall", "debug", "release","excecution","conception", "test", "appli","make","valide","win32","win64","nopch"])
+                opts, args = getopt.getopt(listopt, "hlbiudrectamv", ["help","clean", "build", "install","uninstall", "debug", "release","excecution","conception", "test", "appli","make","valide","win32","win64","nopch"])
                 for opt, bid in opts:
                      if  opt in ("--help" ,"-h"):
                         self.help()
@@ -107,10 +107,18 @@ Options de selection des fichiers projets Rad studio
                 print(err) # will print something like "option -a not recognized"
                 help()
                 raise Exception("Option de compilation invalide")
-       
+
+    def LectureOptionsLigneCde(self):
+        __lectureOption(sys.argv[1:])
+
+    def LectureOptionsChaine(self, options :str):
+        args = options.split()
+        __lectureOption(args)
+
+
     def __init__(self):
         self._silecture = False
-        self.__lectureOption()
+        self.LectureOptionsLigneCde()
    
     @property
     def TypeProjets(self):

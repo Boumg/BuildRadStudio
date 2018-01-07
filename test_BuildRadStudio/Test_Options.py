@@ -1,6 +1,9 @@
-from context import *
+#-*- coding: utf-8 -*-
 
-class TestLancement(unittest.TestCase):
+import unittest
+
+
+class TestOptions(unittest.TestCase):
     def test_something(self):
         self.assertEqual(True, False)
 
