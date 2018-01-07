@@ -97,3 +97,10 @@ target/
 venv/
 ENV/
 
+*.local
+/jeux/xe/TstPackageIde/*.stat
+*.stat
+/jeux/xe/TstExe/TsstExe.res
+/jeux/xe/TstLib/TstLib.res
+/jeux/xe/TstPackageExec/TstPackageExec.res
+/jeux/xe/TstPackageIde/TstPackageIde.res
