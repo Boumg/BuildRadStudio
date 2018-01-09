@@ -50,9 +50,10 @@ Options de selection des fichiers projets Rad studio
             self._Configs = []
             self._TypeProjets = []
             self._Properties = []
+            self._projets=[]
  
             try:
-                opts, args = getopt.getopt(listopt, "hlbiudrectamv", ["help","clean", "build", "install","uninstall", "debug", "release","excecution","conception", "test", "appli","make","valide","win32","win64","nopch"])
+                opts, _projets = getopt.getopt(listopt, "hlbiudrectamv", ["help","clean", "build", "install","uninstall", "debug", "release","excecution","conception", "test", "appli","make","valide","win32","win64","nopch"])
                 for opt, bid in opts:
                      if  opt in ("--help" ,"-h"):
                         self.help()
@@ -109,16 +110,19 @@ Options de selection des fichiers projets Rad studio
                 raise Exception("Option de compilation invalide")
 
     def LectureOptionsLigneCde(self):
-        __lectureOption(sys.argv[1:])
+        self.__lectureOption(sys.argv[1:])
 
     def LectureOptionsChaine(self, options :str):
         args = options.split()
-        __lectureOption(args)
+        self.__lectureOption(args)
 
 
-    def __init__(self):
+    def __init__(self, option :str):
         self._silecture = False
-        self.LectureOptionsLigneCde()
+        if option != None :
+            self.LectureOptionsChaine(option)
+        else:
+            self.LectureOptionsLigneCde()
    
     @property
     def TypeProjets(self):
@@ -135,5 +139,8 @@ Options de selection des fichiers projets Rad studio
     @property
     def Properties(self):
         return  tuple(self._Properties)
+    @property
+    def Projets(self):
+        return  tuple(self._projets)
 
 
