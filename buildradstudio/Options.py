@@ -3,6 +3,10 @@
 import sys
 import getopt
     
+ToutesPlateformes = ["win32","win64"]
+ToutesConfigs = ["release", "debug"]
+TousTypeProjets = ["excecution", "conception", "test", "appli"]
+TousTargets = ["clean", "build", "install"]
 
 class OptionBuild(object):
     def help(self):
@@ -53,7 +57,7 @@ Options de selection des fichiers projets Rad studio
             self._projets=[]
  
             try:
-                opts, _projets = getopt.getopt(listopt, "hlbiudrectamv", ["help","clean", "build", "install","uninstall", "debug", "release","excecution","conception", "test", "appli","make","valide","win32","win64","nopch"])
+                opts, self._projets = getopt.getopt(listopt, "hlbiudrectamv", ["help","clean", "build", "install","uninstall", "debug", "release","excecution","conception", "test", "appli","make","valide","win32","win64","nopch"])
                 for opt, bid in opts:
                      if  opt in ("--help" ,"-h"):
                         self.help()
@@ -90,13 +94,14 @@ Options de selection des fichiers projets Rad studio
                         self._Properties.append("nopch")
 
                 if len(self._Plateformes) == 0 :
-                    self._Plateformes = ["win32","win64"]  
+                    self._Plateformes = ToutesPlateformes
                 if len(self._Configs) == 0 :
-                    self._Configs = ["release","debug"]   
+
+                    self._Configs = ToutesConfigs
                 if len(self._TypeProjets) == 0 :
-                    self._TypeProjets = ["excecution","conception","test","appli"]   
+                    self._TypeProjets = TousTypeProjets
                 if len(self._Targets) == 0 :
-                    self._Targets = ["clean","build","install"]
+                    self._Targets = TousTargets
                 if "install" in self._Targets or "uninstall" in self._Targets :
                     if "conception" not in self._TypeProjets :
                         self._TypeProjets.append("conception")

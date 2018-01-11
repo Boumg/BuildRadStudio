@@ -1,5 +1,13 @@
 
 import unittest
+from jeux import *
+
+
+class TestCleanLib(unittest.TestCase):
+    def test_cleanWin32Release(self):
+        opt="--clean --win32 -r {LibProjet}"
+
+
 
 class TestLancement(unittest.TestCase):
     def test_something(self):

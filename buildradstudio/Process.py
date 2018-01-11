@@ -24,7 +24,7 @@ class MsMake(object):
     def __init__(self, cmd : CmdRad) :
         self.Cmd = cmd
     def Process(self, projet :IdProjet) :
-        self.Cmd.MsBuild(projet.NomComplet + ' /t:Clean /p:Config=' + projet.Config + ' /p:Platform=' + projet.Platform)  
+        self.Cmd.MsBuild(projet.NomCompletStr + ' /t:Clean /p:Config=' + projet.Config + ' /p:Platform=' + projet.Platform)
         SuppressionFichier("stat",projet )
         SuppressionFichier("local",projet )
         SuppressionFichier("identcache",projet )
@@ -53,10 +53,10 @@ class Process(object):
         return self._Racine
    
     @Racine.setter
-    def Racine(self, value: str):
-        self._Racine =  Path( self.Cmd.ResolutionEnv(value))
+    def Racine(self, value):
+        self._Racine =  Path( self.Cmd.ResolutionEnv(str(value)))
         if (not(self._Racine.is_dir() )):
-            raise Exception(f" Le repertoire racine {self._Racine} n'est pas defini.",self._Racine)
+            raise Exception(f" Le repertoire racine {self._Racine} n'est pas defini.")
 
 
 

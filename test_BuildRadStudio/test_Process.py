@@ -1,14 +1,15 @@
 #-*- coding: utf-8 -*-
 
-from context import *
+import unittest
+from jeux import *
 from buildradstudio.Process import *
 from buildradstudio.IdProjet import IdProjet 
 
 class TestProcess(unittest.TestCase):
     def testCleanProjetLib(self) :
-        proc = Process(str(RepertoireJeux))
+        proc = Process(RepertoireJeux)
         m=MsMake(Process.Cmd)
-        f=IdProjet(str(LibProjet))
+        f=IdProjet(LibProjet)
         for platefrom in ["win32", "win64"]:
              for debug in ["release", "debug"]:
                 f._Platform=platefrom
