@@ -5,7 +5,7 @@ from jeux import *
 
 class TestCleanLib(unittest.TestCase):
     def test_cleanWin32Release(self):
-        opt="--clean --win32 -r {LibProjet}"
+        opt=f"--clean --win32 -r {LibProjet}"
 
 
 

@@ -14,10 +14,10 @@ from .IdProjet import IdProjet
 def Process(racine=None, groupes=[], options=None):
     option= OptionBuild(options)
     # Type de projets/ packages  
-    selecs= lambda projet  :   projet.lower() in option.TypeProjets 
-    targets= lambda target :    target.lower() in option.Targets 
-    plateformes= lambda plateforme :    plateforme.lower() in option.Plateformes 
-    configs= lambda config :    config.lower() in option.Configs 
+    selecs=     lambda projet  :   projet.lower() in option.TypeProjets
+    targets=    lambda target :    target.lower() in option.Targets
+    plateformes=lambda plateforme :    plateforme.lower() in option.Plateformes
+    configs=    lambda config :    config.lower() in option.Configs
     properties= lambda property : property.lower() in option.Properties
     for f in option.Projets:
         id=IdProjet(racine, f)
