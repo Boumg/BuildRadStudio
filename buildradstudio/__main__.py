@@ -15,4 +15,4 @@ if __package__ == '':
 import buildradstudio
 
 if __name__ == '__main__':
-    sys.exit(buildradstudio.process())
+    sys.exit(buildradstudio.ProcessMain())

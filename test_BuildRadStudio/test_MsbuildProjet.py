@@ -1,27 +1,55 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 import unittest
 from jeux import *
+from buildradstudio.MsbuildProjet import ProjetMsbuild
+from buildradstudio.IdProjet import IdProjet
 
-import os
-from buildradstudio.CmdRad import CmdRad#todo a sup
-from buildradstudio.MsbuildProjet import ProjetMsbuild 
-from buildradstudio.IdProjet import IdProjet 
 
-class TestMsProjet(unittest.TestCase) :
-    Cmd = CmdRad()
-    Cmd.miseAjourEnv(os.environ)
+class TestMsProjet(unittest.TestCase):
+
     def testGroup(self):
-        groupproj = IdProjet(GroupProjet)
-        ms=ProjetMsbuild(groupproj)
-        print(ms.MsProjet)
-        for e in ms._PropXml :
-            print(e)
+        with ProjetMsbuild(IdProjet(GroupProjet)) as ms:
+            ms.afficheProp()
+
     def testLib(self):
-        lib = IdProjet(LibProjet)
-        ms=ProjetMsbuild(lib)
-        msb=ms.MsProjet
-        print(msb)
+        with  ProjetMsbuild(IdProjet(LibProjet)) as ms:
+            ms.afficheProp()
+
+    def testSousProjets(self):
+        with  ProjetMsbuild(IdProjet(GroupProjet)) as ms:
+            sousprojet = ms.sous_projets()
+            self.assertEqual(len(sousprojet), 4)
+
+    def testSousProjets2(self):
+        with  ProjetMsbuild(IdProjet(GroupProjet)) as ms:
+            sousprojet = ms.sous_projets()
+            self.assertEqual(len(sousprojet), 4)
+
+    def testPropPackageIdeProjet(self):
+        with  ProjetMsbuild(IdProjet(PackageIdeProjet)) as ms:
+            self.assertTrue(ms.siDesignOnlyPackage)
+            self.assertFalse(ms.siRuntimeOnlyPackage)
+            self.assertFalse(ms.siDesignAndExePackage)
+
+    def testPropPackageExecProjet(self):
+        with ProjetMsbuild(IdProjet(PackageExecProjet))as ms:
+            self.assertFalse(ms.siDesignOnlyPackage)
+            self.assertTrue(ms.siRuntimeOnlyPackage)
+            self.assertFalse(ms.siDesignAndExePackage)
+
+    def testPropLibProjet(self):
+        with ProjetMsbuild(IdProjet(LibProjet)) as ms:
+            ms.afficheProp()
+            self.assertFalse(ms.siDesignOnlyPackage)
+            self.assertFalse(ms.siRuntimeOnlyPackage)
+            self.assertFalse(ms.siDesignAndExePackage)
+
+    def testPropExecProjet(self):
+        with ProjetMsbuild(IdProjet(ExecProjet)) as ms:
+            self.assertFalse(ms.siDesignOnlyPackage)
+            self.assertFalse(ms.siRuntimeOnlyPackage)
+            self.assertFalse(ms.siDesignAndExePackage)
 
 
 if __name__ == '__main__':

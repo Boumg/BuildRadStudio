@@ -25,6 +25,25 @@ from buildradstudio.Options import *
 
 """
 class TestOptions(unittest.TestCase):
+    def test_AjoutProjet(self):
+        opt = OptionBuild("toto.prj")
+        listeComposants = [
+            (r'gtestmock\radstudio', "ggmock_group.groupproj"),
+            (r'ComPort-4.14\XE', "CPort.groupproj"),
+            (r'AsyncPro-1.0\xe', "Delphi.groupproj"),
+            (r'SpTBXLib\xe', "sptbxLib.groupproj"),
+            (r'tdbf\xe\Delphi101', "tdbf101.groupproj"),
+            (r'rapidxml-1.13\xe', "RapidXmlGroup.groupproj"),
+            (r'McoXml\xe', "McoXmlGroup.groupproj"),
+            (r'McoDebug\xe', "McoDebugGroup.groupproj"),
+            (r'Mcobdd\xe', "McoBddGroup.groupproj"),
+            (r'ConfigInit\xe', "ConfigInit.groupproj"),
+            (r'Utils\xe', "UtilsComposants.groupproj")
+
+        ]
+        opt.AddProjets(listeComposants)
+        self.assertEqual(len(opt.Projets),12 )
+
     def test_something(self):
         commande=str(LibProjet)
         opt=OptionBuild(commande)

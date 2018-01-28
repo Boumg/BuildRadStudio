@@ -4,38 +4,38 @@
   - Permet d'enregistre automatiquement les packages d'IDE
   - Gestion multi-plateformes multi-configuration
 """
- 
+
 __version__ = "0.0.1"
- 
+__all__ = ['ProcessMain']
+
 from .Options import OptionBuild
+from .CmdRad import CmdRad
 from .Process import Process
-from .IdProjet import IdProjet
+from .IdProjet import IdProjet, ExtRadStudioProjet
+from .MsbuildProjet import ProjetMsbuild
 
-def Process(racine=None, groupes=[], options=None):
-    option= OptionBuild(options)
-    # Type de projets/ packages  
-    selecs=     lambda projet  :   projet.lower() in option.TypeProjets
-    targets=    lambda target :    target.lower() in option.Targets
-    plateformes=lambda plateforme :    plateforme.lower() in option.Plateformes
-    configs=    lambda config :    config.lower() in option.Configs
-    properties= lambda property : property.lower() in option.Properties
+
+def Salut():
+    print("Bonjour les amis")
+def ProcessProjet(id: IdProjet, option: OptionBuild):
+    if id.siGroup:
+        with ProjetMsbuild(id) as gr:
+            for e in gr.sous_projets():
+                p = Process(IdProjet(id.Repertoire / e))
+                p.actions(option)
+    elif id.siProjetCppOrPas:
+        p = Process(id)
+        p.actions(option)
+
+
+def ProcessMain(racine=None, groupes=[], options=None):
+    option = OptionBuild(options)
+    if racine:
+        option.Racine = CmdRad().ResolutionEnv(racine)
+    option.AddProjets(groupes)
+    # Type de projets/ packages
     for f in option.Projets:
-        id=IdProjet(racine, f)
+        ProcessProjet(IdProjet(option.Racine, f), option)
 
-
-    """
-    for g in groupes:
-        b=BuildProjet(racine,g[0],g[1] ) 
-        b.processGroup(selecs, targets, plateformes, configs, properties 
-    """
-"""
-def processGroup(self, PredicatSelec, _Predicattarget, Predicatplateforme, Predicatconfig, PredicatProperty ) :
-    self._PredicatSelec=PredicatSelec
-    self.checkPredicatProperty(PredicatProperty)
-    for  p in self.Platforms :
-      for c in self.Configs :
-          if Predicatconfig(c) and  Predicatplateforme(p):                 
-             for ssproj in self.BuildSousProjets(p,c):
-                if PredicatSelec(ssproj.TypeProjet):
-                        ssproj.process( _Predicattarget , PredicatProperty )
-"""
+if __name__ == "__main__":
+    ProcessMain()

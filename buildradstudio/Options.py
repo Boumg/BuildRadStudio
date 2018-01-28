@@ -2,11 +2,10 @@
 
 import sys
 import getopt
-    
-ToutesPlateformes = ["win32","win64"]
-ToutesConfigs = ["release", "debug"]
-TousTypeProjets = ["excecution", "conception", "test", "appli"]
-TousTargets = ["clean", "build", "install"]
+from pathlib import Path
+
+from .TypeProjet import *
+
 
 class OptionBuild(object):
     def help(self):
@@ -43,109 +42,148 @@ Options de selection des fichiers projets Rad studio
 
 """)
 
-    def __lectureOption(self,listopt):
-            if self._silecture :
-                return
-            self._silecture = True 
-      
-            
-            self._Targets = []
-            self._Plateformes = []
-            self._Configs = []
-            self._TypeProjets = []
-            self._Properties = []
-            self._projets=[]
- 
-            try:
-                opts, self._projets = getopt.getopt(listopt, "hlbiudrectamv", ["help","clean", "build", "install","uninstall", "debug", "release","excecution","conception", "test", "appli","make","valide","win32","win64","nopch"])
-                for opt, bid in opts:
-                     if  opt in ("--help" ,"-h"):
-                        self.help()
-                        exit(0)   
-                     elif opt in "--win32" :
-                        self._Plateformes.append("win32")
-                     elif  opt in "--win64" :   
-                        self._Plateformes.append("win64")
-                     elif  opt in ("--debug" ,"-d"):
-                        self._Configs.append("debug")
-                     elif  opt in ("--release" ,"-r"):
-                        self._Configs.append("release") 
-                     elif  opt in ("--excecution" ,"-e"):
-                        self._TypeProjets("excecution") 
-                     elif  opt in ("--conception" ,"-c"):
-                        self._TypeProjets("conception") 
-                     elif  opt in ("--test" ,"-t"):
-                        self._TypeProjets("test") 
-                     elif  opt in ("--appli" ,"-a"):
-                        self._TypeProjets("appli") 
-                     elif  opt in ("--clean" ,"-l"):
-                        self._Targets.append("clean")
-                     elif  opt in ("--make" ,"-m"):
-                       self._Targets.append("make")
-                     elif  opt in ("--build" ,"-b"):
-                       self._Targets.append("build")
-                     elif  opt in ("--install" ,"-i"):
-                       self._Targets.append("install")
-                     elif  opt in ("--uninstall" ,"-u"):
-                       self._Targets.append("uninstall")
-                     elif  opt in ("--valide" ,"-v"):
-                       self._Targets.append("valide")
-                     elif opt in "--nopch" :
-                        self._Properties.append("nopch")
+    def __lectureOption(self, listopt):
+        if self._silecture:
+            return
+        self._silecture = True
 
-                if len(self._Plateformes) == 0 :
-                    self._Plateformes = ToutesPlateformes
-                if len(self._Configs) == 0 :
+        self._Racine = None
+        self._Targets = []
+        self._Plateformes = []
+        self._Configs = []
+        self._TypeProjets = []
+        self._Properties = []
+        self._projets = []
 
-                    self._Configs = ToutesConfigs
-                if len(self._TypeProjets) == 0 :
-                    self._TypeProjets = TousTypeProjets
-                if len(self._Targets) == 0 :
-                    self._Targets = TousTargets
-                if "install" in self._Targets or "uninstall" in self._Targets :
-                    if "conception" not in self._TypeProjets :
-                        self._TypeProjets.append("conception")
-                #if "nopch" not in self._Properties :
-                #    self._Properties.append("nopch")
-                    
-            except getopt.GetoptError as err:
-                # print help information and exit:
-                print(err) # will print something like "option -a not recognized"
-                help()
-                raise Exception("Option de compilation invalide")
+        try:
+            opts, self._projets = getopt.getopt(listopt, "hlbiudrectamv",
+                                                ["help", "clean", "build", "install", "uninstall", "debug", "release",
+                                                 "excecution", "conception", "test", "appli", "make", "valide", "win32",
+                                                 "win64", "nopch"])
+            for opt, bid in opts:
+                if opt in ("--help", "-h"):
+                    self.help()
+                    exit(0)
+                #Plateforme
+                elif opt in "--win32":
+                    self._Plateformes.append(Plateforme.WIN32)
+                elif opt in "--win64":
+                    self._Plateformes.append(Plateforme.WIN64)
+                #configuration
+                elif opt in ("--debug", "-d"):
+                    self._Configs.append(Config.DEBUG)
+                elif opt in ("--release", "-r"):
+                    self._Configs.append(Config.RELEASE)
+                #type projet
+                elif opt in ("--excecution", "-e"):
+                    self._TypeProjets.append(TypeProjet.PackageExe)
+                    self._TypeProjets.append(TypeProjet.Librairie)
+                elif opt in ("--conception", "-c"):
+                    self._TypeProjets.append(TypeProjet.PackageIde)
+                elif opt in ("--test", "-t"):
+                    self._TypeProjets.append(TypeProjet.Test)
+                elif opt in ("--appli", "-a"):
+                    self._TypeProjets.append(TypeProjet.Application)
+                    self._TypeProjets.append(TypeProjet.Test)
+                #build
+                elif opt in ("--clean", "-l"):
+                    self._Targets.append(Target.CLEAN)
+                elif opt in ("--make", "-m"):
+                    self._Targets.append(Target.MAKE)
+                elif opt in ("--build", "-b"):
+                    self._Targets.append(Target.BUILD)
+                elif opt in ("--install", "-i"):
+                    self._Targets.append(Target.INSTALL)
+                elif opt in ("--uninstall", "-u"):
+                    self._Targets.append(Target.UNINSTALL)
+                elif opt in ("--valide", "-v"):
+                    self._Targets.append(TARGET.TEST)
+                #properties
+                elif opt in "--nopch":
+                    self._Properties.append("nopch")
+
+            if len(self._Plateformes) == 0:
+                self._Plateformes = ToutesPlateformes
+            if len(self._Configs) == 0:
+                self._Configs = ToutesConfigs
+            if len(self._TypeProjets) == 0:
+                self._TypeProjets = TousTypeProjets
+            if len(self._Targets) == 0:
+                self._Targets = TousTargets
+            if  Target.INSTALL in self._Targets or  Target.UNINSTALL in self._Targets:
+                if TypeProjet.PackageIde not in self._TypeProjets:
+                    self._TypeProjets.append(TypeProjet.PackageIde )
+            # if "nopch" not in self._Properties :
+            #    self._Properties.append("nopch")
+
+        except getopt.GetoptError as err:
+            # print help information and exit:
+            print(err)  # will print something like "option -a not recognized"
+            help()
+            raise Exception("Option de compilation invalide")
 
     def LectureOptionsLigneCde(self):
         self.__lectureOption(sys.argv[1:])
 
-    def LectureOptionsChaine(self, options :str):
+    def LectureOptionsChaine(self, options: str):
         args = options.split()
         self.__lectureOption(args)
 
-
-    def __init__(self, option :str):
+    def __init__(self, option: str):
         self._silecture = False
-        if option != None :
+        if option != None:
             self.LectureOptionsChaine(option)
         else:
             self.LectureOptionsLigneCde()
-   
+
     @property
     def TypeProjets(self):
-         return self._TypeProjets
+        return self._TypeProjets
+
     @property
     def Plateformes(self):
         return tuple(self._Plateformes)
+
     @property
     def Configs(self):
         return tuple(self._Configs)
+
     @property
     def Targets(self):
-        return  tuple(self._Targets)
+        return tuple(self._Targets)
+
     @property
     def Properties(self):
-        return  tuple(self._Properties)
+        return tuple(self._Properties)
+
     @property
     def Projets(self):
-        return  tuple(self._projets)
+        return tuple(self._projets)
 
+    @property
+    def PreProjets(self):
+        return lambda projet: projet.lower() in option.TypeProjets
 
+    @property
+    def PreTargets(self):
+        return lambda target: target.lower() in option.Targets
+
+    @property
+    def PreProperties(self):
+        return lambda property: property.lower() in option.Properties
+
+    @property
+    def Racine(self):
+        return self._Racine
+
+    @Racine.setter
+    def Racine(self, value):
+        self._Racine = Path(value)
+        if self._Racine:
+            if (not (self._Racine.is_dir())):
+                raise Exception(f" Le repertoire racine {self._Racine} n'est pas defini.")
+
+    def AddProjets(self, groupe):
+        for rep, nom in groupe:
+            nom = Path(rep) / nom
+            self._projets.append(str(nom))

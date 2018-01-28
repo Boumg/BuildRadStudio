@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
+
 from enum import Enum
 from pathlib import Path
+from .TypeProjet import Plateforme,Config
 
 __all__ = ["IdProjet", "ExtRadStudioProjet"]
 
@@ -34,21 +36,20 @@ class ExtRadStudioProjet(Enum):
 class IdProjet(object):
     """description of class"""
 
-    def __init__(self, repertoire, projet=None, platform="win64", config="release"):
+    def __init__(self, repertoire, projet=None, platform=Plateforme.WIN64, config=Config.RELEASE):
         self._NomComplet = Path()
         _nomComplet = Path()
         if repertoire:
             _nomComplet = Path(repertoire)
         if projet:
             _nomComplet = _nomComplet / Path(projet)
-        self.NomComplet=_nomComplet
-        self._Platform=platform
-        self._Config=config
-
+        self.NomComplet = _nomComplet
+        self.Platform = platform
+        self.Config = config
 
     def Verifier(self):
         if not (self._NomComplet.exists() and self._NomComplet.is_file()):
-            raise Exception(f" Le fichier {self._NomComplet.expanduser()} n'existe pas")
+            raise Exception(f" Le fichier {self.NomCompletStr} n'existe pas")
 
     @property
     def NomComplet(self) -> Path:
@@ -94,9 +95,10 @@ class IdProjet(object):
         return ExtRadStudioProjet.getEext(self.ProjetXml)
 
     @property
-    def Platform(self) -> str:
-        return self._Platform.title()
+    def siGroup(self) -> bool:
+        return self.ProjetExt == ExtRadStudioProjet.GROUP
 
     @property
-    def Config(self) -> str:
-        return self._Config.title()
+    def siProjetCppOrPas(self) -> bool:
+        return self.ProjetExt == ExtRadStudioProjet.CPP or self.ProjetExt == ExtRadStudioProjet.DELPHIP
+

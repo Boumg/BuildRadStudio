@@ -3,6 +3,8 @@ import unittest
 from jeux import *
 
 from buildradstudio.IdProjet import * 
+from buildradstudio.TypeProjet import Plateforme,Config
+
 
 class TestExtRadStudioProjet(unittest.TestCase):
     def testExtension(self):
@@ -21,17 +23,18 @@ class TestIdProjet(unittest.TestCase):
         self.assertEqual(groupproj.Repertoire,self.repertoire)
         self.assertEqual(groupproj.ProjetXml,"TstBuild.groupproj")
         self.assertEqual(groupproj.ProjetExt,ExtRadStudioProjet.GROUP)
-        self.assertEqual(groupproj.Config,"Release")
-        self.assertEqual(groupproj.Platform,"Win64")
-    
+        self.assertEqual(groupproj.Config,Config.RELEASE)
+        self.assertEqual(groupproj.Platform,Plateforme.WIN64)
+        self.assertTrue(groupproj.siGroup)
+
     def testIdWithRerpertoireNone(self):
         groupproj = IdProjet(None, self.repertoire / "TstBuild.groupproj")
         self.assertEqual(groupproj.NomComplet,self.repertoire / "TstBuild.groupproj")
         self.assertEqual(groupproj.Repertoire,self.repertoire)
         self.assertEqual(groupproj.ProjetXml,"TstBuild.groupproj")
         self.assertEqual(groupproj.ProjetExt,ExtRadStudioProjet.GROUP)
-        self.assertEqual(groupproj.Config,"Release")
-        self.assertEqual(groupproj.Platform,"Win64")
+        self.assertEqual(groupproj.Config,Config.RELEASE)
+        self.assertEqual(groupproj.Platform,Plateforme.WIN64)
 
 if __name__ == '__main__':
     unittest.main()
