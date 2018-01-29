@@ -13,9 +13,10 @@ from os import remove
 from shutil import rmtree
 
 def SuppressionRepertoireId(id: IdProjet ):
-    rep = id.Repertoire / id.Platform / id.Config
+    rep = id.Repertoire / id.Platform.value / id.Config.value
     if rep.is_dir():
-        rmtree(str(rep))
+      rmtree(str(rep))
+      print("del :", rep)
 
 
 def SuppressionFichier(ext: str, id: IdProjet):
@@ -114,6 +115,6 @@ class Process(object):
                     self.Id.Platform = p
                     self.Id.Config = c
                     for target in option.Targets:
-                        if (v for v in (Target.INSTALL, Target.UNINSTALL, Target.TEST) if v in option.Targets):
+                        if target in {Target.INSTALL, Target.UNINSTALL, Target.TEST}:
                             self.Update()
                         self.ActionsTarget[target](self, self.Id)
