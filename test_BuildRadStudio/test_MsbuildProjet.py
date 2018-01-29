@@ -19,12 +19,12 @@ class TestMsProjet(unittest.TestCase):
     def testSousProjets(self):
         with  ProjetMsbuild(IdProjet(GroupProjet)) as ms:
             sousprojet = ms.sous_projets()
-            self.assertEqual(len(sousprojet), 4)
+            self.assertEqual(len(sousprojet), 5)
 
     def testSousProjets2(self):
         with  ProjetMsbuild(IdProjet(GroupProjet)) as ms:
             sousprojet = ms.sous_projets()
-            self.assertEqual(len(sousprojet), 4)
+            self.assertEqual(len(sousprojet), 5)
 
     def testPropPackageIdeProjet(self):
         with  ProjetMsbuild(IdProjet(PackageIdeProjet)) as ms:

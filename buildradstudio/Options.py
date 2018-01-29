@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+#todo Argparse
 import sys
 import getopt
 from pathlib import Path
@@ -8,6 +8,14 @@ from .TypeProjet import *
 
 
 class OptionBuild(object):
+
+    def __init__(self, option: str):
+        self._silecture = False
+        if option:
+            self.LectureOptionsChaine(option)
+        else:
+            self.LectureOptionsLigneCde()
+
     def help(self):
         print("""
 Options targets
@@ -64,17 +72,17 @@ Options de selection des fichiers projets Rad studio
                 if opt in ("--help", "-h"):
                     self.help()
                     exit(0)
-                #Plateforme
+                # Plateforme
                 elif opt in "--win32":
                     self._Plateformes.append(Plateforme.WIN32)
                 elif opt in "--win64":
                     self._Plateformes.append(Plateforme.WIN64)
-                #configuration
+                # configuration
                 elif opt in ("--debug", "-d"):
                     self._Configs.append(Config.DEBUG)
                 elif opt in ("--release", "-r"):
                     self._Configs.append(Config.RELEASE)
-                #type projet
+                # type projet
                 elif opt in ("--excecution", "-e"):
                     self._TypeProjets.append(TypeProjet.PackageExe)
                     self._TypeProjets.append(TypeProjet.Librairie)
@@ -85,7 +93,7 @@ Options de selection des fichiers projets Rad studio
                 elif opt in ("--appli", "-a"):
                     self._TypeProjets.append(TypeProjet.Application)
                     self._TypeProjets.append(TypeProjet.Test)
-                #build
+                # build
                 elif opt in ("--clean", "-l"):
                     self._Targets.append(Target.CLEAN)
                 elif opt in ("--make", "-m"):
@@ -97,8 +105,8 @@ Options de selection des fichiers projets Rad studio
                 elif opt in ("--uninstall", "-u"):
                     self._Targets.append(Target.UNINSTALL)
                 elif opt in ("--valide", "-v"):
-                    self._Targets.append(TARGET.TEST)
-                #properties
+                    self._Targets.append(Target.TEST)
+                # properties
                 elif opt in "--nopch":
                     self._Properties.append("nopch")
 
@@ -110,16 +118,16 @@ Options de selection des fichiers projets Rad studio
                 self._TypeProjets = TousTypeProjets
             if len(self._Targets) == 0:
                 self._Targets = TousTargets
-            if  Target.INSTALL in self._Targets or  Target.UNINSTALL in self._Targets:
+            if Target.INSTALL in self._Targets or Target.UNINSTALL in self._Targets:
                 if TypeProjet.PackageIde not in self._TypeProjets:
-                    self._TypeProjets.append(TypeProjet.PackageIde )
+                    self._TypeProjets.append(TypeProjet.PackageIde)
             # if "nopch" not in self._Properties :
             #    self._Properties.append("nopch")
 
         except getopt.GetoptError as err:
             # print help information and exit:
             print(err)  # will print something like "option -a not recognized"
-            help()
+            self.help()
             raise Exception("Option de compilation invalide")
 
     def LectureOptionsLigneCde(self):
@@ -128,13 +136,6 @@ Options de selection des fichiers projets Rad studio
     def LectureOptionsChaine(self, options: str):
         args = options.split()
         self.__lectureOption(args)
-
-    def __init__(self, option: str):
-        self._silecture = False
-        if option != None:
-            self.LectureOptionsChaine(option)
-        else:
-            self.LectureOptionsLigneCde()
 
     @property
     def TypeProjets(self):

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{97fb4a80-dd02-4dec-b990-ae1a4f5c9458}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>test_BuildRadStudio\test_IdProjet.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>Global|PythonCore|3.6</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="buildradstudio.egg-info\dependency_links.txt" />
+    <Content Include="buildradstudio.egg-info\entry_points.txt" />
+    <Content Include="buildradstudio.egg-info\requires.txt" />
+    <Content Include="buildradstudio.egg-info\SOURCES.txt" />
+    <Content Include="buildradstudio.egg-info\top_level.txt" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="buildradstudio\CmdRad.py" />
+    <Compile Include="buildradstudio\Embarcadero.py" />
+    <Compile Include="buildradstudio\IdProjet.py" />
+    <Compile Include="buildradstudio\MsbuildProjet.py" />
+    <Compile Include="buildradstudio\Options.py" />
+    <Compile Include="buildradstudio\Process.py" />
+    <Compile Include="buildradstudio\TypeProjet.py" />
+    <Compile Include="buildradstudio\__init__.py" />
+    <Compile Include="buildradstudio\__main__.py" />
+    <Compile Include="build\lib\buildradstudio\CmdRad.py" />
+    <Compile Include="build\lib\buildradstudio\Embarcadero.py" />
+    <Compile Include="build\lib\buildradstudio\IdProjet.py" />
+    <Compile Include="build\lib\buildradstudio\MsbuildProjet.py" />
+    <Compile Include="build\lib\buildradstudio\Options.py" />
+    <Compile Include="build\lib\buildradstudio\Process.py" />
+    <Compile Include="build\lib\buildradstudio\TypeProjet.py" />
+    <Compile Include="build\lib\buildradstudio\__init__.py" />
+    <Compile Include="build\lib\buildradstudio\__main__.py" />
+    <Compile Include="jeux\GeneAll.py" />
+    <Compile Include="jeux\__init__.py" />
+    <Compile Include="setup.py" />
+    <Compile Include="test_BuildRadStudio\context.py" />
+    <Compile Include="test_BuildRadStudio\test_CmdRad.py" />
+    <Compile Include="test_BuildRadStudio\test_Embarcadero.py" />
+    <Compile Include="test_BuildRadStudio\test_IdProjet.py" />
+    <Compile Include="test_BuildRadStudio\test_MsbuildProjet.py" />
+    <Compile Include="test_BuildRadStudio\Test_Options.py" />
+    <Compile Include="test_BuildRadStudio\test_Process.py" />
+    <Compile Include="test_BuildRadStudio\test__init__.py" />
+    <Compile Include="test_BuildRadStudio\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="buildradstudio" />
+    <Folder Include="buildradstudio.egg-info" />
+    <Folder Include="build\" />
+    <Folder Include="build\lib\" />
+    <Folder Include="build\lib\buildradstudio" />
+    <Folder Include="jeux" />
+    <Folder Include="test_BuildRadStudio" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.6" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>

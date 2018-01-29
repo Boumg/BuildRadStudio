@@ -3,27 +3,7 @@
 import unittest
 from jeux import *
 from buildradstudio.Options import *
-"""
-    @property
-    def TypeProjets(self):
-         return self._TypeProjets
-    @property
-    def Plateformes(self):
-        return tuple(self._Plateformes)
-    @property
-    def Configs(self):
-        return tuple(self._Configs)
-    @property
-    def Targets(self):
-        return  tuple(self._Targets)
-    @property
-    def Properties(self):
-        return  tuple(self._Properties)
-    @property
-    def Projets(self):
-        return  tuple(self._projets)
 
-"""
 class TestOptions(unittest.TestCase):
     def test_AjoutProjet(self):
         opt = OptionBuild("toto.prj")
@@ -43,6 +23,11 @@ class TestOptions(unittest.TestCase):
         ]
         opt.AddProjets(listeComposants)
         self.assertEqual(len(opt.Projets),12 )
+
+    def test_erreur(self):
+        self.assertRaises(Exception,OptionBuild,"--merde")
+
+
 
     def test_something(self):
         commande=str(LibProjet)

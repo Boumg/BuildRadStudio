@@ -15,6 +15,9 @@
         <Projects Include="TstExe\TsstExe.cbproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="Test_tst\Test_tst.cbproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -59,14 +62,23 @@
     <Target Name="TsstExe:Make">
         <MSBuild Projects="TstExe\TsstExe.cbproj" Targets="Make"/>
     </Target>
+    <Target Name="Test_tst">
+        <MSBuild Projects="Test_tst\Test_tst.cbproj"/>
+    </Target>
+    <Target Name="Test_tst:Clean">
+        <MSBuild Projects="Test_tst\Test_tst.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Test_tst:Make">
+        <MSBuild Projects="Test_tst\Test_tst.cbproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="TstLib;TstPackageExec;TstPackageIde;TsstExe"/>
+        <CallTarget Targets="TstLib;TstPackageExec;TstPackageIde;TsstExe;Test_tst"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="TstLib:Clean;TstPackageExec:Clean;TstPackageIde:Clean;TsstExe:Clean"/>
+        <CallTarget Targets="TstLib:Clean;TstPackageExec:Clean;TstPackageIde:Clean;TsstExe:Clean;Test_tst:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="TstLib:Make;TstPackageExec:Make;TstPackageIde:Make;TsstExe:Make"/>
+        <CallTarget Targets="TstLib:Make;TstPackageExec:Make;TstPackageIde:Make;TsstExe:Make;Test_tst:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

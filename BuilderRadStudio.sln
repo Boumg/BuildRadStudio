@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "BuilderRadStudio", "BuilderRadStudio.pyproj", "{97FB4A80-DD02-4DEC-B990-AE1A4F5C9458}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97FB4A80-DD02-4DEC-B990-AE1A4F5C9458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97FB4A80-DD02-4DEC-B990-AE1A4F5C9458}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9D40A120-F5B4-439B-B7E6-85054AE1E207}
+	EndGlobalSection
+EndGlobal

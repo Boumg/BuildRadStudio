@@ -32,5 +32,5 @@ class Target(Enum):
 TousTypeProjets = list(TypeProjet)
 ToutesPlateformes = list(Plateforme)
 ToutesConfigs = list(Config)
-TousTargets = [Target.CLEAN, Target.BUILD, Target.INSTALL]
+TousTargets = [Target.CLEAN, Target.BUILD, Target.INSTALL, Target.TEST]
 

@@ -9,10 +9,12 @@ if __package__ == '':
     # first dirname call strips of '/__main__.py', second strips off '/pip'
     # Resulting path is the name of the wheel itself
     # Add that to sys.path so we can import pip
-    path = pathlib.Path(__file__).parent
+    path = pathlib.Path(__file__).resolve().parent.parent
     sys.path.insert(0, str(path))
+    from buildradstudio import ProcessMain
 
-import buildradstudio
+else:
+    from . import ProcessMain
 
 if __name__ == '__main__':
-    sys.exit(buildradstudio.ProcessMain())
+    sys.exit(ProcessMain())

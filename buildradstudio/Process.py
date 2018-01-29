@@ -10,40 +10,30 @@ from .Options import OptionBuild
 
 from os import remove
 
+from shutil import rmtree
 
-# listeProjetEvalue = []
+def SuppressionRepertoireId(id: IdProjet ):
+    rep = id.Repertoire / id.Platform / id.Config
+    if rep.is_dir():
+        rmtree(str(rep))
 
 
-def SuppressionFichier(ext: str, projet: IdProjet):
-    for fic in projet.Repertoire.glob(f"*.{ext}"):
+def SuppressionFichier(ext: str, id: IdProjet):
+    for fic in id.Repertoire.rglob(f"*.{ext}"):
         print("suppression :", fic)
         remove(str(fic))
 
-
-class MsMake(object):
-    """description of class"""
-
-    def __init__(self, cmd: CmdRad):
-        self.Cmd = cmd
-
-    def Process(self, projet: IdProjet):
-        self.Cmd.MsBuild(
-            projet.NomCompletStr + ' /t:Clean /p:Config=' + projet.Config + ' /p:Platform=' + projet.Platform)
-        SuppressionFichier("stat", projet)
-        SuppressionFichier("local", projet)
-        SuppressionFichier("identcache", projet)
-
-        # Rd %COMPOSANTS%\SpTBXLib\Test\Win32 /s /q
-        # Rd %COMPOSANTS%\SpTBXLib\Test\Win64 /s /q
-        # del %COMPOSANTS%\SpTBXLib\Test\*.stat /f /q
-        # del %COMPOSANTS%\SpTBXLib\Test\*.local /f /q
-        # REM del %COMPOSANTS%\SpTBXLib\Test\*.res /f /q
-        # del %COMPOSANTS%\SpTBXLib\Test\*.identcache /f /q
 
 
 class Process(object):
     def clean(self, id: IdProjet):
         CmdRad().MsBuild(f"{id.NomCompletStr} /t:Clean /p:Config={id.Config.value} /p:Platform={id.Platform.value}")
+        SuppressionFichier("stat", id)
+        SuppressionFichier("local", id)
+        SuppressionFichier("identcache", id)
+        SuppressionRepertoireId(id)
+
+
 
     def Make(self, id: IdProjet):
         if self.siOkCompile:
@@ -74,26 +64,33 @@ class Process(object):
             rucheKnownPackage.effacerValeurSiExiste(self.FinalOutput)
             self.clearCaches(self.FinalOutputName)
 
-    # def _Valide1(self, id: IdProjet):
-    #     if self.siTest:
-    #         CmdRad().build(self.FinalOutput)
+    def Valide(self, id: IdProjet):
+        if self.siTest:
+            CmdRad().cwd = str(id.Repertoire)
+            CmdRad().Cde(self.FinalOutput)
 
     ActionsTarget = {Target.CLEAN: clean,
                      Target.BUILD: Build,
                      Target.MAKE: Make,
                      Target.INSTALL: Install,
-                     Target.UNINSTALL: UnInstall
+                     Target.UNINSTALL: UnInstall,
+                     Target.TEST: Valide
                      }
 
     def __init__(self, id: IdProjet):
         self.Id = id
-        with  ProjetMsbuild(id) as ms:
+        self.Update()
+
+    def Update(self):
+        with  ProjetMsbuild(self.Id) as ms:
             self.TypeProjet = ms.typeProjet
             self.siDesignOnlyPackage = ms.siDesignOnlyPackage
             self.siDesignAndExePackage = ms.siDesignAndExePackage
             self.FinalOutputName = ms.FinalOutputName
             self.SanitizedProjectName = ms.SanitizedProjectName
-            self.FinalOutput = ms.SanitizedProjectName
+            self.FinalOutput = ms.FinalOutput
+            self.siTest = ms.siTest
+            #ms.afficheProp()
 
     @property
     def siOkCompile(self):
@@ -117,6 +114,6 @@ class Process(object):
                     self.Id.Platform = p
                     self.Id.Config = c
                     for target in option.Targets:
+                        if (v for v in (Target.INSTALL, Target.UNINSTALL, Target.TEST) if v in option.Targets):
+                            self.Update()
                         self.ActionsTarget[target](self, self.Id)
-
-
