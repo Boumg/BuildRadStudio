@@ -11,8 +11,9 @@ class TypeProjet(Enum):
 
 
 class Plateforme(Enum):
-    WIN32 = "Win32"
     WIN64 = "Win64"
+    WIN32 = "Win32"
+
 
 
 class Config(Enum):
