@@ -80,6 +80,9 @@ setup(
     entry_points={
         'console_scripts': [
             'RXBuild= buildradstudio:ProcessMain',
+            'RXAttenteArretBds= buildradstudio:AttenteArretBds',
+            'RXcheckVarEnv= buildradstudio:checkVarEnv',
+
         ],
     },
 

@@ -105,7 +105,7 @@ class ProjetMsbuild(object):
 
     @property
     def siTest(self):
-        return self.SanitizedProjectName.upper().find("TEST") != -1
+        return self.estExe and self.SanitizedProjectName.upper().find("TEST") != -1
 
     @property
     def typeProjet(self) -> TypeProjet:

@@ -67,9 +67,29 @@ class TestProcessMax(unittest.TestCase):
         opt = f" --build --test  --valide -r --win64 {GroupProjet}"
         ProcessMain(options=opt)
 
+    @unittest.skip("demonstrating skipping")
     def test_CleanGroup(self):
         opt = f" --clean  {GroupProjet}"
         ProcessMain(options=opt)
+
+    # def test_CleanGroup(self):
+    #     listeComposants = [
+    #         (r'gtestmock\radstudio', "ggmock_group.groupproj")
+    #         #    (r'ComPort-4.14\XE',"CPort.groupproj"),
+    #         # 	(r'AsyncPro-1.0\xe',"Delphi.groupproj"),
+    #         #     (r'SpTBXLib\xe',"sptbxLib.groupproj"),
+    #         #     (r'tdbf\xe\Delphi101',"tdbf101.groupproj"),
+    #         #     (r'rapidxml-1.13\xe',"RapidXmlGroup.groupproj"),
+    #         #     (r'McoXml\xe',"McoXmlGroup.groupproj"),
+    #         # 	(r'McoDebug\xe',"McoDebugGroup.groupproj"),
+    #         #     (r'Mcobdd\xe',"McoBddGroup.groupproj"),
+    #         #     (r'ConfigInit\xe',"ConfigInit.groupproj"),
+    #         #     (r'Utils\xe',"UtilsComposants.groupproj")
+    #
+    #     ]
+    #
+    #     ProcessMain("%COMPOSANTS%", listeComposants, " --clean  ")
+
 
 
 if __name__ == '__main__':
