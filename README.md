@@ -3,7 +3,9 @@ Gestion des builds Rad Studio
 
 Installation
 Installer le module "rxbuilder"
-python setup.py install
+ - sous le repetoire , BuildRadStudio
+ - python setup.py install
+
 Pour lancer directement un script python :
 
 Lancer la console dos (cmd) en mode admin, et tapez les commandes suivantes :
@@ -14,3 +16,5 @@ Lancer la console dos (cmd) en mode admin, et tapez les commandes suivantes :
 
  Deinstallation
  pip rxbuilder uninstall
+
+

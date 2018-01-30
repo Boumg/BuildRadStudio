@@ -184,6 +184,10 @@ Options de selection des fichiers projets Rad studio
             if (not (self._Racine.is_dir())):
                 raise Exception(f" Le repertoire racine {self._Racine} n'est pas defini.")
 
+    def AddProjetsListe(self, groupe):
+        for rep in groupe:
+            self._projets.append(rep)
+
     def AddProjets(self, groupe):
         for rep, nom in groupe:
             nom = Path(rep) / nom

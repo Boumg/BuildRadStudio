@@ -79,7 +79,7 @@ setup(
     # La syntaxe est "nom-de-commande-a-creer = package.module:fonction".
     entry_points={
         'console_scripts': [
-            'RXBuild= rxbuilder:rxbuilder',
+            'RXBuild= rxbuilder:rxbuild',
             'RXAttenteArretBds= rxbuilder:AttenteArretBds',
             'RXcheckVarEnv= rxbuilder:checkVarEnv',
 

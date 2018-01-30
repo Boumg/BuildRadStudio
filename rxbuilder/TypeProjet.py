@@ -24,18 +24,25 @@ class Config(Enum):
 
 
 class Target(Enum):
+    UNINSTALL = "uninstall"
     CLEAN = "clean"
     BUILD = "build"
     MAKE = "make"
-    INSTALL = "install"
-    UNINSTALL = "uninstall"
     TEST = "valide"
+    INSTALL = "install"
+
 
 
 TousTypeProjets = list(TypeProjet)
+
+Phase1Projets=[TypeProjet.Librairie,TypeProjet.PackageExe]
+Phase2Projets=[TypeProjet.PackageIde]
+Phase3Projets=[TypeProjet.Application, TypeProjet.Test]
+
+
 ToutesPlateformes = list(Plateforme)
 ToutesConfigs = list(Config)
-TousTargets = [Target.CLEAN, Target.BUILD, Target.INSTALL, Target.TEST]
+TousTargets = [Target.CLEAN, Target.BUILD,Target.TEST, Target.INSTALL ]
 
 
 class RXSuffix(Enum):
