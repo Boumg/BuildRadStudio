@@ -18,3 +18,7 @@ Lancer la console dos (cmd) en mode admin, et tapez les commandes suivantes :
  pip rxbuilder uninstall
 
 
+Lancer les tests sour la console
+ - sous le repetoire , BuildRadStudio
+ - tapez : make test
+ - ou tapez : nose2
