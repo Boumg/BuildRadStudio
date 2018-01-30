@@ -1,9 +1,9 @@
 #-*- coding: utf-8 -*-
 
 import unittest
-from jeux import *
-from buildradstudio.Process import *
-from buildradstudio.IdProjet import IdProjet 
+from jeux_rxbuilder import *
+from rxbuilder.Process import *
+from rxbuilder.IdProjet import IdProjet 
 
 class TestProcess(unittest.TestCase):
     def testCleanProjetLib(self) :

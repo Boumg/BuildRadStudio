@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-from jeux import *
-from buildradstudio.MsbuildProjet import ProjetMsbuild
-from buildradstudio.IdProjet import IdProjet
+from jeux_rxbuilder import *
+from rxbuilder.MsbuildProjet import ProjetMsbuild
+from rxbuilder.IdProjet import IdProjet
 
 
 class TestMsProjet(unittest.TestCase):

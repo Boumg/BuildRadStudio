@@ -39,7 +39,7 @@ def siIdeBdsEnCours() -> bool:
     return siProcessEnCours(RADSTUDIO_IDE_NOM)
 
 
-def AttenteArretBds():
+def attenteArretBds():
     if siIdeBdsEnCours():
         os.system("color 0C")
         print("Rad Studio (BDS)  est en cours d'exécution")

@@ -1,36 +1,11 @@
 # -*- coding: utf-8 -*-
 
-from enum import Enum
 from pathlib import Path
-from .TypeProjet import Plateforme,Config
 
-__all__ = ["IdProjet", "ExtRadStudioProjet"]
+from rxbuilder import RXSuffix
+from .TypeProjet import Plateforme, Config, RXSuffix
 
-
-class ExtRadStudioProjet(Enum):
-    CPP = "cbproj"
-    DEPLOY = "deployproj"
-    DELPHIP = "dproj"
-    GROUP = "groupproj"
-
-    @classmethod
-    def getEext(self, fichier):
-        """
-         retour le type de fichier msbuild,
-         sinon une erreur si le fichier n'est pas msbuild
-        """
-        fic = Path(fichier.lower())
-        ext = fic.suffix[1:]
-        if ext[-4:] != "proj":
-            raise Exception("Le fichier n'est pas de type msbuild , ", fichier)
-        trouve = None
-        for e in ExtRadStudioProjet:
-            if ext == e.value:
-                trouve = e
-                break
-        if not trouve:
-            raise Exception("Le fichier n'est pas de type Rad Studio , ", fichier)
-        return trouve
+__all__ = ["IdProjet"]
 
 
 class IdProjet(object):
@@ -92,13 +67,13 @@ class IdProjet(object):
 
     @property
     def ProjetExt(self) -> str:
-        return ExtRadStudioProjet.getEext(self.ProjetXml)
+        return RXSuffix.getEext(self.ProjetXml)
 
     @property
     def siGroup(self) -> bool:
-        return self.ProjetExt == ExtRadStudioProjet.GROUP
+        return self.ProjetExt == RXSuffix.GROUP
 
     @property
     def siProjetCppOrPas(self) -> bool:
-        return self.ProjetExt == ExtRadStudioProjet.CPP or self.ProjetExt == ExtRadStudioProjet.DELPHIP
+        return self.ProjetExt == RXSuffix.CPP or self.ProjetExt == RXSuffix.DELPHIP
 

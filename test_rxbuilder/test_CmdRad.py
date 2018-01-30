@@ -1,14 +1,9 @@
 #-*- coding: utf-8 -*-
 
 
-
-
-
 import unittest
 
-
-
-from buildradstudio.CmdRad import CmdRad
+from rxbuilder.CmdRad import CmdRad
 
 class TestCmdRad(unittest.TestCase):
     @classmethod

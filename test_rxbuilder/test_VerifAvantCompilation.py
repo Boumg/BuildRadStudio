@@ -6,7 +6,7 @@ if __name__ == '__main__':
     path = pathlib.Path(__file__).resolve().parent.parent
     sys.path.insert(0, str(path))
 
-from buildradstudio.VerifAvantCompilation import siProcessEnCours, AttenteArretBds, checkVarEnv
+from rxbuilder.VerifAvantCompilation import siProcessEnCours, attenteArretBds, checkVarEnv
 
 
 class TestVerifAvantCompilation(unittest.TestCase):
@@ -18,7 +18,7 @@ class TestVerifAvantCompilation(unittest.TestCase):
         self.assertTrue(siProcessEnCours('svchost'))
 
     def test_AttenteBDE(self):
-        AttenteArretBds()
+        attenteArretBds()
 
     def test_existeVariableEnv(self):
         self.assertTrue(checkVarEnv("USERPROFILE"))

@@ -1,14 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/buildradstudio/__init__.py" line="30" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="a8498a63-57b4-4dfb-976e-de3086f606de" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/BuilderRadStudio.iml" afterPath="$PROJECT_DIR$/.idea/BuilderRadStudio.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/buildradstudio/MsbuildProjet.py" afterPath="$PROJECT_DIR$/buildradstudio/MsbuildProjet.py" />
+      <change beforePath="$PROJECT_DIR$/Builder.pyproj" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Builder.sln" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="$PROJECT_DIR$/buildradstudio/CmdRad.py" afterPath="$PROJECT_DIR$/rxbuilder/CmdRad.py" />
+      <change beforePath="$PROJECT_DIR$/buildradstudio/Embarcadero.py" afterPath="$PROJECT_DIR$/rxbuilder/Embarcadero.py" />
+      <change beforePath="$PROJECT_DIR$/buildradstudio/IdProjet.py" afterPath="$PROJECT_DIR$/rxbuilder/IdProjet.py" />
+      <change beforePath="$PROJECT_DIR$/buildradstudio/MsbuildProjet.py" afterPath="$PROJECT_DIR$/rxbuilder/MsbuildProjet.py" />
+      <change beforePath="$PROJECT_DIR$/buildradstudio/Options.py" afterPath="$PROJECT_DIR$/rxbuilder/Options.py" />
+      <change beforePath="$PROJECT_DIR$/buildradstudio/Process.py" afterPath="$PROJECT_DIR$/rxbuilder/Process.py" />
+      <change beforePath="$PROJECT_DIR$/buildradstudio/TypeProjet.py" afterPath="$PROJECT_DIR$/rxbuilder/TypeProjet.py" />
+      <change beforePath="$PROJECT_DIR$/buildradstudio/VerifAvantCompilation.py" afterPath="$PROJECT_DIR$/rxbuilder/VerifAvantCompilation.py" />
+      <change beforePath="$PROJECT_DIR$/buildradstudio/__init__.py" afterPath="$PROJECT_DIR$/rxbuilder/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/buildradstudio/__main__.py" afterPath="$PROJECT_DIR$/rxbuilder/__main__.py" />
+      <change beforePath="$PROJECT_DIR$/jeux/GeneAll.py" afterPath="$PROJECT_DIR$/jeux_rxbuilder/GeneAll.py" />
+      <change beforePath="$PROJECT_DIR$/jeux/__init__.py" afterPath="$PROJECT_DIR$/jeux_rxbuilder/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/jeux/opt/DelphiClang.optset" afterPath="$PROJECT_DIR$/jeux_rxbuilder/opt/DelphiClang.optset" />
+      <change beforePath="$PROJECT_DIR$/jeux/opt/LibComposant.optset" afterPath="$PROJECT_DIR$/jeux_rxbuilder/opt/LibComposant.optset" />
+      <change beforePath="$PROJECT_DIR$/jeux/src/CheckListBox1.cpp" afterPath="$PROJECT_DIR$/jeux_rxbuilder/src/CheckListBox1.cpp" />
+      <change beforePath="$PROJECT_DIR$/jeux/src/CheckListBox1.h" afterPath="$PROJECT_DIR$/jeux_rxbuilder/src/CheckListBox1.h" />
+      <change beforePath="$PROJECT_DIR$/jeux/src/CheckListBox1Ide.cpp" afterPath="$PROJECT_DIR$/jeux_rxbuilder/src/CheckListBox1Ide.cpp" />
+      <change beforePath="$PROJECT_DIR$/jeux/xe/Test_tst/Test_tst.cbproj" afterPath="$PROJECT_DIR$/jeux_rxbuilder/xe/Test_tst/Test_tst.cbproj" />
+      <change beforePath="$PROJECT_DIR$/jeux/xe/Test_tst/Test_tst.cpp" afterPath="$PROJECT_DIR$/jeux_rxbuilder/xe/Test_tst/Test_tst.cpp" />
+      <change beforePath="$PROJECT_DIR$/jeux/xe/Test_tst/Unit5.cpp" afterPath="$PROJECT_DIR$/jeux_rxbuilder/xe/Test_tst/Unit5.cpp" />
+      <change beforePath="$PROJECT_DIR$/jeux/xe/Test_tst/Unit5.h" afterPath="$PROJECT_DIR$/jeux_rxbuilder/xe/Test_tst/Unit5.h" />
+      <change beforePath="$PROJECT_DIR$/jeux/xe/TstBuild.groupproj" afterPath="$PROJECT_DIR$/jeux_rxbuilder/xe/TstBuild.groupproj" />
+      <change beforePath="$PROJECT_DIR$/jeux/xe/TstExe/TsstExe.cbproj" afterPath="$PROJECT_DIR$/jeux_rxbuilder/xe/TstExe/TsstExe.cbproj" />
+      <change beforePath="$PROJECT_DIR$/jeux/xe/TstExe/TsstExe.cpp" afterPath="$PROJECT_DIR$/jeux_rxbuilder/xe/TstExe/TsstExe.cpp" />
+      <change beforePath="$PROJECT_DIR$/jeux/xe/TstExe/TsstExePCH1.h" afterPath="$PROJECT_DIR$/jeux_rxbuilder/xe/TstExe/TsstExePCH1.h" />
+      <change beforePath="$PROJECT_DIR$/jeux/xe/TstExe/Unit4.cpp" afterPath="$PROJECT_DIR$/jeux_rxbuilder/xe/TstExe/Unit4.cpp" />
+      <change beforePath="$PROJECT_DIR$/jeux/xe/TstExe/Unit4.dfm" afterPath="$PROJECT_DIR$/jeux_rxbuilder/xe/TstExe/Unit4.dfm" />
+      <change beforePath="$PROJECT_DIR$/jeux/xe/TstExe/Unit4.h" afterPath="$PROJECT_DIR$/jeux_rxbuilder/xe/TstExe/Unit4.h" />
+      <change beforePath="$PROJECT_DIR$/jeux/xe/TstLib/TstLib.cbproj" afterPath="$PROJECT_DIR$/jeux_rxbuilder/xe/TstLib/TstLib.cbproj" />
+      <change beforePath="$PROJECT_DIR$/jeux/xe/TstLib/Unit1.cpp" afterPath="$PROJECT_DIR$/jeux_rxbuilder/xe/TstLib/Unit1.cpp" />
+      <change beforePath="$PROJECT_DIR$/jeux/xe/TstLib/Unit1.h" afterPath="$PROJECT_DIR$/jeux_rxbuilder/xe/TstLib/Unit1.h" />
+      <change beforePath="$PROJECT_DIR$/jeux/xe/TstPackageExec/TstPackageExec.cbproj" afterPath="$PROJECT_DIR$/jeux_rxbuilder/xe/TstPackageExec/TstPackageExec.cbproj" />
+      <change beforePath="$PROJECT_DIR$/jeux/xe/TstPackageExec/TstPackageExec.cpp" afterPath="$PROJECT_DIR$/jeux_rxbuilder/xe/TstPackageExec/TstPackageExec.cpp" />
+      <change beforePath="$PROJECT_DIR$/jeux/xe/TstPackageExec/TstPackageExecPCH1.h" afterPath="$PROJECT_DIR$/jeux_rxbuilder/xe/TstPackageExec/TstPackageExecPCH1.h" />
+      <change beforePath="$PROJECT_DIR$/jeux/xe/TstPackageIde/TstPackageIde.cbproj" afterPath="$PROJECT_DIR$/jeux_rxbuilder/xe/TstPackageIde/TstPackageIde.cbproj" />
+      <change beforePath="$PROJECT_DIR$/jeux/xe/TstPackageIde/TstPackageIde.cpp" afterPath="$PROJECT_DIR$/jeux_rxbuilder/xe/TstPackageIde/TstPackageIde.cpp" />
+      <change beforePath="$PROJECT_DIR$/jeux/xe/TstPackageIde/TstPackageIdePCH1.h" afterPath="$PROJECT_DIR$/jeux_rxbuilder/xe/TstPackageIde/TstPackageIdePCH1.h" />
       <change beforePath="$PROJECT_DIR$/setup.py" afterPath="$PROJECT_DIR$/setup.py" />
-      <change beforePath="$PROJECT_DIR$/test_BuildRadStudio/test__init__.py" afterPath="$PROJECT_DIR$/test_BuildRadStudio/test__init__.py" />
+      <change beforePath="$PROJECT_DIR$/test_BuildRadStudio/Test_Options.py" afterPath="$PROJECT_DIR$/test_rxbuilder/Test_Options.py" />
+      <change beforePath="$PROJECT_DIR$/test_BuildRadStudio/__init__.py" afterPath="$PROJECT_DIR$/test_rxbuilder/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/test_BuildRadStudio/context.py" afterPath="$PROJECT_DIR$/test_rxbuilder/context.py" />
+      <change beforePath="$PROJECT_DIR$/test_BuildRadStudio/test_CmdRad.py" afterPath="$PROJECT_DIR$/test_rxbuilder/test_CmdRad.py" />
+      <change beforePath="$PROJECT_DIR$/test_BuildRadStudio/test_Embarcadero.py" afterPath="$PROJECT_DIR$/test_rxbuilder/test_Embarcadero.py" />
+      <change beforePath="$PROJECT_DIR$/test_BuildRadStudio/test_IdProjet.py" afterPath="$PROJECT_DIR$/test_rxbuilder/test_IdProjet.py" />
+      <change beforePath="$PROJECT_DIR$/test_BuildRadStudio/test_MsbuildProjet.py" afterPath="$PROJECT_DIR$/test_rxbuilder/test_MsbuildProjet.py" />
+      <change beforePath="$PROJECT_DIR$/test_BuildRadStudio/test_Process.py" afterPath="$PROJECT_DIR$/test_rxbuilder/test_Process.py" />
+      <change beforePath="$PROJECT_DIR$/test_BuildRadStudio/test_VerifAvantCompilation.py" afterPath="$PROJECT_DIR$/test_rxbuilder/test_VerifAvantCompilation.py" />
+      <change beforePath="$PROJECT_DIR$/test_BuildRadStudio/test__init__.py" afterPath="$PROJECT_DIR$/test_rxbuilder/test__init__.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,13 +70,11 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Process.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/buildradstudio/Process.py">
+        <entry file="file://$PROJECT_DIR$/rxbuilder/Process.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1027">
-              <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-              <folding>
-                <element signature="e#25#49#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="513">
+              <caret line="117" column="42" lean-forward="false" selection-start-line="117" selection-start-column="42" selection-end-line="117" selection-end-column="42" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -37,95 +82,97 @@
       <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="68" column="45" lean-forward="false" selection-start-line="67" selection-start-column="37" selection-end-line="68" selection-end-column="45" />
-              <folding>
-                <element signature="e#25#68#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="threading.py" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Python36_amd64/Lib/threading.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1226">
-              <caret line="886" column="22" lean-forward="false" selection-start-line="886" selection-start-column="22" selection-end-line="886" selection-end-column="22" />
+            <state relative-caret-position="648">
+              <caret line="83" column="51" lean-forward="true" selection-start-line="83" selection-start-column="51" selection-end-line="83" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MsbuildProjet.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/buildradstudio/MsbuildProjet.py">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rxbuilder/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="102" column="18" lean-forward="false" selection-start-line="102" selection-start-column="18" selection-end-line="102" selection-end-column="18" />
+            <state relative-caret-position="204">
+              <caret line="36" column="21" lean-forward="false" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+              <folding>
+                <element signature="e#272#296#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_IdProjet.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_rxbuilder/test_IdProjet.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="59" lean-forward="false" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="59" />
+              <folding>
+                <element signature="e#23#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Makefile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="35" lean-forward="true" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="TypeProjet.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/buildradstudio/TypeProjet.py">
+        <entry file="file://$PROJECT_DIR$/rxbuilder/TypeProjet.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/buildradstudio/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding>
-                <element signature="e#276#306#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IdProjet.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/buildradstudio/IdProjet.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test__init__.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test_BuildRadStudio/test__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="86" column="29" lean-forward="false" selection-start-line="86" selection-start-column="29" selection-end-line="86" selection-end-column="29" />
+            <state relative-caret-position="1">
+              <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Options.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/buildradstudio/Options.py">
+        <entry file="file://$PROJECT_DIR$/rxbuilder/Options.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="177" column="0" lean-forward="false" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
+            <state relative-caret-position="1278">
+              <caret line="190" column="0" lean-forward="false" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GeneComposants.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/COMPOSANTS/GeneComposants.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="15" lean-forward="true" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
               <folding>
-                <element signature="e#39#49#0" expanded="true" />
+                <element signature="e#24#33#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_BuildRadStudio/__init__.py">
+      <file leaf-file-name="IdProjet.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rxbuilder/IdProjet.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="476">
+              <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+              <folding>
+                <element signature="e#25#49#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -152,6 +199,7 @@
       <find>isTest</find>
       <find>siTest</find>
       <find>FinalOutput</find>
+      <find>ExtRadStudioProjet</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -160,7 +208,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test_BuildRadStudio/test_CmdRad.py" />
         <option value="$PROJECT_DIR$/test_BuildRadStudio/test_Embarcadero.py" />
         <option value="$PROJECT_DIR$/jeux/__init__.py" />
         <option value="$PROJECT_DIR$/test_BuildRadStudio/test_Process.py" />
@@ -176,10 +223,16 @@
         <option value="$PROJECT_DIR$/test_BuildRadStudio/test_MsbuildProjet.py" />
         <option value="$PROJECT_DIR$/buildradstudio/Options.py" />
         <option value="$PROJECT_DIR$/buildradstudio/TypeProjet.py" />
-        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/buildradstudio/Process.py" />
         <option value="$PROJECT_DIR$/buildradstudio/MsbuildProjet.py" />
         <option value="$PROJECT_DIR$/test_BuildRadStudio/test__init__.py" />
+        <option value="$PROJECT_DIR$/test_BuildRadStudio/test_CmdRad.py" />
+        <option value="$PROJECT_DIR$/rxbuilder/IdProjet.py" />
+        <option value="$PROJECT_DIR$/test_rxbuilder/test_IdProjet.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/rxbuilder/__init__.py" />
+        <option value="C:/COMPOSANTS/GeneComposants.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -208,39 +261,25 @@
         <subPane>
           <expand>
             <path>
-              <item name="BuilderRadStudio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BuilderRadStudio" type="462c0819:PsiDirectoryNode" />
+              <item name="BuildRadStudio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BuildRadStudio" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="BuilderRadStudio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BuilderRadStudio" type="462c0819:PsiDirectoryNode" />
-              <item name="buildradstudio" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BuilderRadStudio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BuilderRadStudio" type="462c0819:PsiDirectoryNode" />
-              <item name="test_BuildRadStudio" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BuilderRadStudio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="BuilderRadStudio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="BuildRadStudio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BuildRadStudio" type="462c0819:PsiDirectoryNode" />
+              <item name="rxbuilder" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/rxbuilder/TypeProjet.py" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -254,37 +293,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in test__init__.py">
-    <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_BuildRadStudio" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="BuilderRadStudio" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_BuildRadStudio/__init__.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="Unittests for test__init__.TestCleanLib.test_Build_Win32Release" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="Unittests for test_IdProjet.TestExtRadStudioProjet" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_BuildRadStudio" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_rxbuilder" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="BuilderRadStudio" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test__init__.TestCleanLib.test_Build_Win32Release&quot;" />
+      <option name="_new_target" value="&quot;test_IdProjet.TestExtRadStudioProjet&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
     <configuration name="Unittests in Test_Options.py" type="tests" factoryName="Unittests" nameIsGenerated="true">
@@ -292,13 +313,13 @@
       <option name="PARENT_ENVS" value="true" />
       <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_BuildRadStudio" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_rxbuilder" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="BuilderRadStudio" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_BuildRadStudio/Test_Options.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_rxbuilder/Test_Options.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <configuration name="Unittests in test_Embarcadero.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
@@ -306,13 +327,13 @@
       <option name="PARENT_ENVS" value="true" />
       <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_BuildRadStudio" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_rxbuilder" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="BuilderRadStudio" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_BuildRadStudio/test_Embarcadero.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_rxbuilder/test_Embarcadero.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <configuration name="Unittests in test_VerifAvantCompilation.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
@@ -320,13 +341,13 @@
       <option name="PARENT_ENVS" value="true" />
       <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_BuildRadStudio" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_rxbuilder" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="BuilderRadStudio" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_BuildRadStudio/test_VerifAvantCompilation.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_rxbuilder/test_VerifAvantCompilation.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <configuration name="Unittests in test__init__.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
@@ -334,31 +355,45 @@
       <option name="PARENT_ENVS" value="true" />
       <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_BuildRadStudio" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_rxbuilder" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="BuilderRadStudio" />
       <option name="_new_pattern" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_BuildRadStudio/test__init__.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_rxbuilder/test__init__.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration name="Unittests in test_rxbuilder" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_rxbuilder" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="BuilderRadStudio" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_rxbuilder&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in Test_Options.py" />
-      <item index="1" class="java.lang.String" itemvalue="Python.__init__" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in test__init__.py" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for test__init__.TestCleanLib.test_Build_Win32Release" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in test_Embarcadero.py" />
-      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests in test_VerifAvantCompilation.py" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in test__init__.py" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in test_Embarcadero.py" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in test_VerifAvantCompilation.py" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in test_rxbuilder" />
+      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests for test_IdProjet.TestExtRadStudioProjet" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in test__init__.py" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in test_VerifAvantCompilation.py" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in test_Embarcadero.py" />
-        <item index="3" class="java.lang.String" itemvalue="Python.__init__" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for test__init__.TestCleanLib.test_Build_Win32Release" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in test_rxbuilder" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests for test_IdProjet.TestExtRadStudioProjet" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in test__init__.py" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in test_VerifAvantCompilation.py" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in test_Embarcadero.py" />
       </list>
     </recent_temporary>
   </component>
@@ -387,26 +422,11 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_Test_Options_py - 2018.01.30 at 00h 24m 51s.xml">
-      <configuration name="Unittests in Test_Options.py" configurationId="tests" />
+    <history-entry file="Unittests_for_test_IdProjet_TestExtRadStudioProjet - 2018.01.30 at 15h 16m 58s.xml">
+      <configuration name="Unittests for test_IdProjet.TestExtRadStudioProjet" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test__init___py - 2018.01.29 at 23h 14m 39s.xml">
-      <configuration name="Unittests in test__init__.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test__init___py - 2018.01.29 at 23h 28m 14s.xml">
-      <configuration name="Unittests in test__init__.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test__init___py - 2018.01.30 at 00h 04m 41s.xml">
-      <configuration name="Unittests in test__init__.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test__init___py - 2018.01.30 at 00h 07m 50s.xml">
-      <configuration name="Unittests in test__init__.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test__init___py - 2018.01.30 at 00h 10m 07s.xml">
-      <configuration name="Unittests in test__init__.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test__init___py - 2018.01.30 at 00h 12m 27s.xml">
-      <configuration name="Unittests in test__init__.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_BuildRadStudio - 2018.01.30 at 09h 34m 09s.xml">
+      <configuration name="Unittests in test_BuildRadStudio" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_in_test__init___py - 2018.01.30 at 00h 18m 02s.xml">
       <configuration name="Unittests in test__init__.py" configurationId="tests" />
@@ -417,27 +437,42 @@
     <history-entry file="Unittests_in_test__init___py - 2018.01.30 at 00h 54m 50s.xml">
       <configuration name="Unittests in test__init__.py" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_in_test_rxbuilder - 2018.01.30 at 09h 41m 47s.xml">
+      <configuration name="Unittests in test_rxbuilder" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_rxbuilder - 2018.01.30 at 09h 43m 35s.xml">
+      <configuration name="Unittests in test_rxbuilder" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_rxbuilder - 2018.01.30 at 15h 15m 55s.xml">
+      <configuration name="Unittests in test_rxbuilder" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_rxbuilder - 2018.01.30 at 15h 17m 10s.xml">
+      <configuration name="Unittests in test_rxbuilder" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_rxbuilder - 2018.01.30 at 15h 23m 54s.xml">
+      <configuration name="Unittests in test_rxbuilder" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23798266" sideWeight="0.49584815" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2402529" sideWeight="0.49584815" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3982512" sideWeight="0.50157607" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29888713" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298887" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3444227" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29843444" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298887" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3982512" sideWeight="0.49842396" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297456" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23798266" sideWeight="0.5041518" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3982512" sideWeight="0.49842396" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -452,29 +487,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_BuildRadStudio/test_IdProjet.py</url>
-          <line>20</line>
+          <url>file://$PROJECT_DIR$/test_rxbuilder/test_IdProjet.py</url>
+          <line>22</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/buildradstudio/__main__.py</url>
+          <url>file://$PROJECT_DIR$/rxbuilder/__main__.py</url>
           <line>2</line>
           <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_BuildRadStudio/test__init__.py</url>
-          <line>95</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/buildradstudio/Process.py</url>
-          <line>69</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_BuildRadStudio/test__init__.py</url>
-          <line>90</line>
-          <option name="timeStamp" value="40" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -489,80 +509,56 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/buildradstudio/CmdRad.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2156">
-          <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buildradstudio/Options.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_BuildRadStudio/Test_Options.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_BuildRadStudio/test_IdProjet.py">
+    <entry file="file://$PROJECT_DIR$/test_rxbuilder/test_IdProjet.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_BuildRadStudio/test_CmdRad.py">
+    <entry file="file://$PROJECT_DIR$/test_rxbuilder/test_CmdRad.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="10" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_BuildRadStudio/test_Embarcadero.py">
+    <entry file="file://$PROJECT_DIR$/test_rxbuilder/test_Embarcadero.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="15" column="42" lean-forward="false" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_BuildRadStudio/test_MsbuildProjet.py">
+    <entry file="file://$PROJECT_DIR$/test_rxbuilder/test_MsbuildProjet.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_BuildRadStudio/test__init__.py">
+    <entry file="file://$PROJECT_DIR$/test_rxbuilder/test__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buildradstudio/Options.py">
+    <entry file="file://$PROJECT_DIR$/rxbuilder/Options.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="31" column="53" lean-forward="false" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_BuildRadStudio/test_Process.py">
+    <entry file="file://$PROJECT_DIR$/test_rxbuilder/test_Process.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buildradstudio/IdProjet.py">
+    <entry file="file://$PROJECT_DIR$/rxbuilder/IdProjet.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -576,20 +572,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_BuildRadStudio/Test_Options.py">
+    <entry file="file://$PROJECT_DIR$/test_rxbuilder/Test_Options.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="e#24#39#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_BuildRadStudio/test_CmdRad.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="10" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -600,42 +589,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_BuildRadStudio/test_Embarcadero.py">
+    <entry file="file://$PROJECT_DIR$/test_rxbuilder/test_Embarcadero.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="15" column="42" lean-forward="false" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python36_amd64/Lib/unittest/suite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python36_amd64/Lib/unittest/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python36_amd64/Lib/unittest/runner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="175" column="0" lean-forward="false" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/Python36_amd64/Lib/unittest/suite.py" />
+    <entry file="file://C:/Python36_amd64/Lib/unittest/main.py" />
+    <entry file="file://C:/Python36_amd64/Lib/unittest/runner.py" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/teamcity/unittestpy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="446">
           <caret line="303" column="0" lean-forward="false" selection-start-line="303" selection-start-column="0" selection-end-line="303" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -643,66 +610,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
           <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python36_amd64/Lib/unittest/loader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_BuildRadStudio/test_Process.py">
+    <entry file="file://C:/Python36_amd64/Lib/unittest/loader.py" />
+    <entry file="file://$PROJECT_DIR$/test_rxbuilder/test_Process.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_BuildRadStudio/test_IdProjet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="32" column="62" lean-forward="true" selection-start-line="32" selection-start-column="62" selection-end-line="32" selection-end-column="62" />
-          <folding>
-            <element signature="e#23#38#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-639982751/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="778" column="8" lean-forward="false" selection-start-line="778" selection-start-column="8" selection-end-line="778" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python36_amd64/Lib/pathlib.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="902" column="0" lean-forward="false" selection-start-line="902" selection-start-column="0" selection-end-line="902" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python36_amd64/Lib/types.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jeux/__init__.py">
+    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-639982751/builtins.py" />
+    <entry file="file://C:/Python36_amd64/Lib/pathlib.py" />
+    <entry file="file://C:/Python36_amd64/Lib/types.py" />
+    <entry file="file://$PROJECT_DIR$/jeux_rxbuilder/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="4" column="11" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buildradstudio/Embarcadero.py">
+    <entry file="file://$PROJECT_DIR$/rxbuilder/Embarcadero.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
@@ -710,15 +639,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python36_amd64/Lib/getopt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_BuildRadStudio/Test_Options.py">
+    <entry file="file://C:/Python36_amd64/Lib/getopt.py" />
+    <entry file="file://$PROJECT_DIR$/test_rxbuilder/Test_Options.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="682">
           <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
@@ -728,15 +650,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python36_amd64/Lib/unittest/case.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="681" column="0" lean-forward="false" selection-start-line="681" selection-start-column="0" selection-end-line="681" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_BuildRadStudio/context.py">
+    <entry file="file://C:/Python36_amd64/Lib/unittest/case.py" />
+    <entry file="file://$PROJECT_DIR$/test_rxbuilder/context.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -744,7 +659,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buildradstudio/__main__.py">
+    <entry file="file://$PROJECT_DIR$/rxbuilder/__main__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="13" selection-end-column="42" />
@@ -754,17 +669,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buildradstudio/VerifAvantCompilation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding>
-            <element signature="e#25#35#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_BuildRadStudio/test_VerifAvantCompilation.py">
+    <entry file="file://$PROJECT_DIR$/test_rxbuilder/test_VerifAvantCompilation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
           <caret line="24" column="36" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="36" />
@@ -774,7 +679,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_BuildRadStudio/test_MsbuildProjet.py">
+    <entry file="file://$PROJECT_DIR$/test_rxbuilder/test_MsbuildProjet.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="372">
           <caret line="26" column="47" lean-forward="false" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
@@ -782,23 +687,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python36_amd64/Lib/_sitebuiltins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python36_amd64/Lib/ntpath.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="361" column="0" lean-forward="false" selection-start-line="361" selection-start-column="0" selection-end-line="361" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buildradstudio/CmdRad.py">
+    <entry file="file://C:/Python36_amd64/Lib/_sitebuiltins.py" />
+    <entry file="file://C:/Python36_amd64/Lib/ntpath.py" />
+    <entry file="file://$PROJECT_DIR$/rxbuilder/CmdRad.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
           <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
@@ -806,49 +697,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python36_amd64/Lib/subprocess.py">
+    <entry file="file://C:/Python36_amd64/Lib/subprocess.py" />
+    <entry file="file://C:/Python36_amd64/Lib/threading.py" />
+    <entry file="file://$PROJECT_DIR$/rxbuilder/MsbuildProjet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="1063" column="0" lean-forward="false" selection-start-line="1063" selection-start-column="0" selection-end-line="1063" selection-end-column="0" />
+        <state relative-caret-position="442">
+          <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python36_amd64/Lib/threading.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1226">
-          <caret line="886" column="22" lean-forward="false" selection-start-line="886" selection-start-column="22" selection-end-line="886" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buildradstudio/TypeProjet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="68" column="45" lean-forward="false" selection-start-line="67" selection-start-column="37" selection-end-line="68" selection-end-column="45" />
-          <folding>
-            <element signature="e#25#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buildradstudio/MsbuildProjet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="102" column="18" lean-forward="false" selection-start-line="102" selection-start-column="18" selection-end-line="102" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_BuildRadStudio/__init__.py">
+    <entry file="file://$PROJECT_DIR$/test_rxbuilder/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -856,48 +715,118 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buildradstudio/Options.py">
+    <entry file="file://$PROJECT_DIR$/test_rxbuilder/test__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="177" column="0" lean-forward="false" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
-          <folding>
-            <element signature="e#39#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buildradstudio/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="e#276#306#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buildradstudio/IdProjet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buildradstudio/Process.py">
+    <entry file="file://$PROJECT_DIR$/test_rxbuilder/test_CmdRad.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1027">
-          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="e#25#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rxbuilder/VerifAvantCompilation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="579">
+          <caret line="53" column="38" lean-forward="true" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
+          <folding>
+            <element signature="e#25#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rxbuilder/IdProjet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
           <folding>
             <element signature="e#25#49#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_BuildRadStudio/test__init__.py">
+    <entry file="file://$PROJECT_DIR$/Makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="86" column="29" lean-forward="false" selection-start-line="86" selection-start-column="29" selection-end-line="86" selection-end-column="29" />
+        <state relative-caret-position="17">
+          <caret line="1" column="35" lean-forward="true" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_rxbuilder/test_IdProjet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="59" lean-forward="false" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="59" />
+          <folding>
+            <element signature="e#23#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="83" column="51" lean-forward="true" selection-start-line="83" selection-start-column="51" selection-end-line="83" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rxbuilder/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="36" column="21" lean-forward="false" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+          <folding>
+            <element signature="e#272#296#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rxbuilder/Process.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="117" column="42" lean-forward="false" selection-start-line="117" selection-start-column="42" selection-end-line="117" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rxbuilder/TypeProjet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1">
+          <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rxbuilder/Options.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1278">
+          <caret line="190" column="0" lean-forward="false" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/COMPOSANTS/GeneComposants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="15" lean-forward="true" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+          <folding>
+            <element signature="e#24#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>

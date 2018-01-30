@@ -6,21 +6,30 @@
 """
 
 __version__ = "0.0.1"
-__all__ = ['ProcessMain', "checkVarEnv", "AttenteArretBds"]
-from .TypeProjet import Target
+__all__ = ['rxbuild', "checkVarEnv", "attenteArretBds"]
+from pathlib import Path
+from .TypeProjet import Target,RXSuffix
 from .Options import OptionBuild
 from .CmdRad import CmdRad
 from .Process import Process
-from .IdProjet import IdProjet, ExtRadStudioProjet
+from .IdProjet import IdProjet
+
 from .MsbuildProjet import ProjetMsbuild
-from .VerifAvantCompilation import AttenteArretBds, checkVarEnv
+from .VerifAvantCompilation import attenteArretBds, checkVarEnv
 
+def ListeSelctionFichiers(pattern):
+    return [str(f) for f in Path().glob("*.{pattern.value}")]
 
-def Salut():
-    print("Bonjour les amis")
+def ListeProjets():
+    return ListeSelctionFichiers(RXSuffix.CPP.value) + ListeSelctionFichiers(RXSuffix.DELPHIP)
 
+def ListeGroupOuProjets():
+    li=ListeSelctionFichiers(RXSuffix.GROUP)
+    if  li:
+        return li;
+    return ListeProjets;
 
-def ProcessProjet(id: IdProjet, option: OptionBuild):
+def rxbuildProjet(id: IdProjet, option: OptionBuild):
     if id.siGroup:
         with ProjetMsbuild(id) as gr:
             for e in gr.sous_projets():
@@ -31,7 +40,7 @@ def ProcessProjet(id: IdProjet, option: OptionBuild):
         p.actions(option)
 
 
-def ProcessMain(racine=None, groupes=[], options=None):
+def rxbuild(racine=None, groupes=[], options=None):
     try:
         option = OptionBuild(options)
     except  Exception as e:
@@ -39,14 +48,18 @@ def ProcessMain(racine=None, groupes=[], options=None):
         exit(3)
     if Target.INSTALL in option.Targets or Target.UNINSTALL in option.Targets:
         # il n'est pas possible d'(de)installer avec Ide ouvert
-        AttenteArretBds()
+        attenteArretBds()
     if racine:
         option.Racine = CmdRad().ResolutionEnv(racine)
     option.AddProjets(groupes)
+    #Recherche des fichiers projets sous le repertoire courant
+    if not option.Projets:
+        option.AddProjets( ListeGroupOuProjets())
+
     # Type de projets/ packages
     for f in option.Projets:
-        ProcessProjet(IdProjet(option.Racine, f), option)
+        rxbuildProjet(IdProjet(option.Racine, f), option)
 
 
 if __name__ == "__main__":
-    ProcessMain()
+    rxbuild()

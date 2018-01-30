@@ -4,17 +4,17 @@ from setuptools import setup, find_packages
 
 # notez qu'on import la lib
 # donc assurez-vous que l'importe n'a pas d'effet de bord
-import buildradstudio
+import rxbuilder
 
 # Ceci n'est qu'un appel de fonction. Mais il est trèèèèèèèèèèès long
 # et il comporte beaucoup de paramètres
 setup(
 
     # le nom de votre bibliothèque, tel qu'il apparaitre sur pypi
-    name='buildradstudio',
+    name='rxbuilder',
 
     # la version du code
-    version=buildradstudio.__version__,
+    version=rxbuilder.__version__,
 
     # Liste les packages à insérer dans la distribution
     # plutôt que de le faire à la main, on utilise la foncton
@@ -22,7 +22,7 @@ setup(
     # python recursivement dans le dossier courant.
     # C'est pour cette raison que l'on a tout mis dans un seul dossier:
     # on peut ainsi utiliser cette fonction facilement
-    packages=find_packages(exclude=['jeux', 'test_BuildRadStudio']),
+    packages=find_packages(exclude=['jeux_rxbuilder', 'test_rxbuilder']),
 
     # votre pti nom
     author="BoumG",
@@ -79,9 +79,9 @@ setup(
     # La syntaxe est "nom-de-commande-a-creer = package.module:fonction".
     entry_points={
         'console_scripts': [
-            'RXBuild= buildradstudio:ProcessMain',
-            'RXAttenteArretBds= buildradstudio:AttenteArretBds',
-            'RXcheckVarEnv= buildradstudio:checkVarEnv',
+            'RXBuild= rxbuilder:rxbuilder',
+            'RXAttenteArretBds= rxbuilder:AttenteArretBds',
+            'RXcheckVarEnv= rxbuilder:checkVarEnv',
 
         ],
     },

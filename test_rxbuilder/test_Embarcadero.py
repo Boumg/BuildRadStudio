@@ -1,6 +1,6 @@
 #-*- coding: utf-8 -*-
 import unittest
-from buildradstudio.Embarcadero import * 
+from rxbuilder.Embarcadero import * 
 
 
 

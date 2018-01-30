@@ -1,8 +1,8 @@
 #-*- coding: utf-8 -*-
 
 import unittest
-from jeux import *
-from buildradstudio.Options import *
+from jeux_rxbuilder import *
+from rxbuilder.Options import *
 
 class TestOptions(unittest.TestCase):
     def test_AjoutProjet(self):
