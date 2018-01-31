@@ -28,6 +28,7 @@ def SuppressionFichier(ext: str, id: IdProjet):
 
 class Process(object):
     def clean(self, id: IdProjet):
+        CmdRad().cwd = str(id.Repertoire)
         CmdRad().MsBuild(f"{id.NomCompletStr} /t:Clean /p:Config={id.Config.value} /p:Platform={id.Platform.value}")
         SuppressionFichier("stat", id)
         SuppressionFichier("local", id)
@@ -67,8 +68,9 @@ class Process(object):
 
     def Valide(self, id: IdProjet):
         if self.siTest:
-            CmdRad().cwd = str(id.Repertoire)
-            CmdRad().Cde(self.FinalOutput)
+            cde=id.Repertoire / self.FinalOutput
+            CmdRad().cwd = str(cde.parent)
+            CmdRad().Cde(cde.name)
 
     ActionsTarget = {Target.CLEAN: clean,
                      Target.BUILD: Build,

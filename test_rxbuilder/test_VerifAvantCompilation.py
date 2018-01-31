@@ -16,15 +16,14 @@ class TestVerifAvantCompilation(unittest.TestCase):
 
     def test_ProcessEnCours(self):
         self.assertTrue(siProcessEnCours('svchost'))
-
+    @unittest.skip("partie à la main, skipping")
     def test_AttenteBDE(self):
         attenteArretBds()
 
     def test_existeVariableEnv(self):
         self.assertTrue(checkVarEnv("USERPROFILE"))
-        self.assertFalse(checkVarEnv("PATH"))
-        self.assertFalse(checkVarEnv("kkkkkkkk"))
-
+        self.assertRaises(Exception, checkVarEnv, "PATH")
+        self.assertRaises(Exception, checkVarEnv, "kkkkkkkk")
 
 if __name__ == '__main__':
     unittest.main()

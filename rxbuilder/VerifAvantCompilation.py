@@ -2,8 +2,10 @@
 
 import clr
 from System.Diagnostics import Process
+from pathlib import Path
 import time
 import os
+from rxbuilder.CmdRad import CmdRad
 
 """
 Remplace le code dos suivant :
@@ -49,6 +51,14 @@ def attenteArretBds():
         os.system("color 0F")
 
 
-def checkVarEnv(varName: str) -> bool:
+def checkVarEnv(varName: str):
     var = os.environ.get(varName)
-    return var and os.path.exists(var)
+    if not var:
+        raise Exception(f" La variable environnement {varName} n'est pas défini.")
+    rep= Path(CmdRad().ResolutionEnv(var))
+    if rep:
+        if (not (rep.is_dir())):
+            raise Exception(f"La veleur de la variable env. {varName} reference un repertoire {rep} qui n'est pas defini.")
+    else:
+        raise Exception(f" La variable environement {varName} n'est pas de valeur.")
+    return True

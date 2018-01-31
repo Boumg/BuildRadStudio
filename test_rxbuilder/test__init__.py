@@ -22,55 +22,55 @@ from rxbuilder import rxbuild
 
 
 class TestProcessMax(unittest.TestCase):
-    @unittest.skip("demonstrating skipping")
+    #@unittest.skip("demonstrating skipping")
     def test_cleanWin32Release(self):
         opt = f"--clean --win32 -r {LibProjet}"
         rxbuild(options=opt)
 
-    @unittest.skip("demonstrating skipping")
+    #@unittest.skip("demonstrating skipping")
     def test_cleanRelease(self):
         opt = f"--clean -r {LibProjet}"
         rxbuild(options=opt)
 
-    @unittest.skip("demonstrating skipping")
+    #@unittest.skip("demonstrating skipping")
     def test_cleanAll(self):
         opt = f"--clean  {LibProjet}"
         rxbuild(options=opt)
 
-    @unittest.skip("demonstrating skipping")
+    #@unittest.skip("demonstrating skipping")
+    def test_CleanGroup(self):
+        opt = f" --clean  {GroupProjet}"
+        rxbuild(options=opt)
+
+    #@unittest.skip("demonstrating skipping")
     def test_Build_Win32Release(self):
         opt = f"--build --win64 -r {LibProjet}"
         rxbuild(options=opt)
 
-    @unittest.skip("demonstrating skipping")
+    #@unittest.skip("demonstrating skipping")
     def test_BuildLib(self):
         opt = f"--build  {LibProjet}"
         rxbuild(options=opt)
 
-    @unittest.skip("demonstrating skipping")
+    #@unittest.skip("demonstrating skipping")
     def test_BuildInstall(self):
         opt = f"  -i -r {PackageIdeProjet}"
         rxbuild(options=opt)
 
-    @unittest.skip("demonstrating skipping")
+    #@unittest.skip("demonstrating skipping")
     def test_BuildUnInstall(self):
         opt = f"  -u -r {PackageIdeProjet}"
         rxbuild(options=opt)
 
-    @unittest.skip("demonstrating skipping")
+    #@unittest.skip("demonstrating skipping")
     def test_BuildUnInstall(self):
         opt = f"  -r --win64 {GroupProjet}"
         rxbuild(options=opt)
 
-    @unittest.skip("demonstrating skipping")
     def test_LancementTest(self):
         opt = f" --build --test  --valide -r --win64 {GroupProjet}"
         rxbuild(options=opt)
 
-    @unittest.skip("demonstrating skipping")
-    def test_CleanGroup(self):
-        opt = f" --clean  {GroupProjet}"
-        rxbuild(options=opt)
 
     # def test_CleanGroup(self):
     #     listeComposants = [
