@@ -25,14 +25,14 @@ void __fastcall TMyTestObject::TearDown()
 
 void __fastcall TMyTestObject::Test1()
 {
-  // TODO
+
   String s("Hello");
   Dunitx::Testframework::Assert::IsTrue(s == "Hello");
 }
 
 void __fastcall TMyTestObject::Test2()
 {
-  // TODO
+
   String s("Hello");
   Dunitx::Testframework::Assert::IsFalse(s == "Bonjour"); // This fails for illustrative purposes       but no
 }

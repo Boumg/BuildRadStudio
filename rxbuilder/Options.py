@@ -18,6 +18,9 @@ class OptionBuild(object):
 
     def help(self):
         print("""
+commande en ligne
+    rxbuild [options] [groupe projets RX ] [projets RXC]
+    
 Options targets
     --clean -l suppression des fichiers de construction
     --build -b construction des projets
@@ -43,8 +46,7 @@ Options de selection des fichiers projets Rad studio
         --appli      -a ccompilation des executables 
         Pas d'indiquation, compilation de tous les projets
         
-    Proprietes
-        --nopch  compilation sans les PCH
+
 
     Nota: Pas de build des packages de conception en x64 
 

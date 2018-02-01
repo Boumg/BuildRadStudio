@@ -21,6 +21,8 @@ class TestVerifAvantCompilation(unittest.TestCase):
         attenteArretBds()
 
     def test_existeVariableEnv(self):
+		# version avec verification du resultat
+        #self.assertTrue(checkVarEnv("GTEST_ROOT","%COMPOSANTS%\\gtestmock\\"))
         self.assertTrue(checkVarEnv("USERPROFILE"))
         self.assertRaises(Exception, checkVarEnv, "PATH")
         self.assertRaises(Exception, checkVarEnv, "kkkkkkkk")

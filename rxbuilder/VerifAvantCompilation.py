@@ -51,7 +51,7 @@ def attenteArretBds():
         os.system("color 0F")
 
 
-def checkVarEnv(varName: str):
+def checkVarEnv(varName: str, val_comp= None):
     var = os.environ.get(varName)
     if not var:
         raise Exception(f" La variable environnement {varName} n'est pas défini.")
@@ -61,4 +61,9 @@ def checkVarEnv(varName: str):
             raise Exception(f"La veleur de la variable env. {varName} reference un repertoire {rep} qui n'est pas defini.")
     else:
         raise Exception(f" La variable environement {varName} n'est pas de valeur.")
+    if val_comp:
+        rep_comp=Path( CmdRad().ResolutionEnv(val_comp))
+        if rep != rep_comp:
+            raise Exception(f" La variable environement {varName} n'est pas la bonne valeur;  attendu: {val_comp}, valeur:{rep} ")
+
     return True
