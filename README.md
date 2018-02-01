@@ -44,3 +44,5 @@ Lancer les tests sour la console
 
  tapez sous une console :
   rxbuild --help
+  
+  rxbuild
