@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 # notez qu'on import la lib
 # donc assurez-vous que l'importe n'a pas d'effet de bord
-import rxbuilder
+#from rxbuilder import __version__
 
 # Ceci n'est qu'un appel de fonction. Mais il est trèèèèèèèèèèès long
 # et il comporte beaucoup de paramètres
@@ -14,7 +14,7 @@ setup(
     name='rxbuilder',
 
     # la version du code
-    version=rxbuilder.__version__,
+    version= "0.1.0",
 
     # Liste les packages à insérer dans la distribution
     # plutôt que de le faire à la main, on utilise la foncton

@@ -12,5 +12,6 @@ class TestProcess(unittest.TestCase):
         proc.actions(OptionBuild(" --clean --win32 -r"))
         proc.actions(OptionBuild(" --clean --win64 -d"))
 
+
 if __name__ == '__main__':
     unittest.main()

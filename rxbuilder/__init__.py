@@ -5,80 +5,100 @@
   - Gestion multi-plateformes multi-configuration
 """
 
-__version__ = "0.0.2"
-__all__ = ['rxbuild', "checkVarEnv", "attenteArretBds"]
+__version__ = "0.1.6"
+__all__ = ['rxbuild', "checkVarEnv", "attenteArretBds", "Cde", "CdeRad", "CmdDef", "CmdRad",
+           "suppression_repertoire", "get_cmake_cde","BuildCmakeVS", "CtestCmakeVS", "rxbuild_minimum_requis"
+           ]
 from pathlib import Path
 
-from .TypeProjet import Target,RXSuffix, Phase1Projets ,Phase2Projets,Phase3Projets
+from os import getcwd
+from sys import argv
+
+from .TypeProjet import Target, RXSuffix, Phase1Projets, Phase2Projets, Phase3Projets
 from .Options import OptionBuild
-from .CmdRad import CmdRad
+from .CmdRad import CmdRad, Cde, CdeRad, CmdDef
 from .Process import Process
 from .IdProjet import IdProjet
 
 from .MsbuildProjet import ProjetMsbuild
-from .VerifAvantCompilation import attenteArretBds, checkVarEnv
+from .VerifAvantCompilation import attenteArretBds, checkVarEnv, suppression_repertoire, \
+    rxbuild_minimum_requis
+from .cmake_util import  get_cmake_cde, BuildCmakeVS, CtestCmakeVS
 
 def ListeSelctionFichiers(pattern):
-    c=Path.cwd()
+    c = Path.cwd()
     return [str(f) for f in c.glob(f"*.{pattern.value}")]
+
 
 def ListeProjets():
     return ListeSelctionFichiers(RXSuffix.CPP) + ListeSelctionFichiers(RXSuffix.DELPHIP)
 
+
 def ListeGroupOuProjets():
-    li=ListeSelctionFichiers(RXSuffix.GROUP)
-    if  li:
+    li = ListeSelctionFichiers(RXSuffix.GROUP)
+    if li:
         return li;
     return ListeProjets();
-def ParcoursGroup(groupe,id: IdProjet,  option: OptionBuild):
+
+
+def ParcoursGroup(groupe, id: IdProjet, option: OptionBuild):
     for e in groupe:
         p = Process(IdProjet(id.Repertoire / e))
         p.actions(option)
 
+
 def rxbuildProjet(id: IdProjet, option: OptionBuild):
     if id.siGroup:
         with ProjetMsbuild(id) as gr:
-            groupe= gr.sous_projets()
-            typesprojets =option._TypeProjets
-            #print("typesprojets",typesprojets)
+            groupe = gr.sous_projets()
+            typesprojets = option._TypeProjets
+            # print("typesprojets",typesprojets)
 
-            #phase 1
-            option._TypeProjets= [v for v in Phase1Projets if v in typesprojets ]
-            #print("phase 1",option._TypeProjets)
-            ParcoursGroup(groupe,id,option)
+            # phase 1
+            option._TypeProjets = [v for v in Phase1Projets if v in typesprojets]
+            # print("phase 1",option._TypeProjets)
+            ParcoursGroup(groupe, id, option)
 
-            #phase 2
-            option._TypeProjets= [v for v in Phase2Projets if v in typesprojets ]
-            #print("phase 2",option._TypeProjets)
-            ParcoursGroup(groupe,id,option)
+            # phase 2
+            option._TypeProjets = [v for v in Phase2Projets if v in typesprojets]
+            # print("phase 2",option._TypeProjets)
+            ParcoursGroup(groupe, id, option)
 
-            #phase 3
+            # phase 3
             option._TypeProjets = [v for v in Phase3Projets if v in typesprojets]
-            #print("phase 3",option._TypeProjets)
-            ParcoursGroup(groupe, id,option)
+            # print("phase 3",option._TypeProjets)
+            ParcoursGroup(groupe, id, option)
 
-            option._TypeProjets=typesprojets
+            option._TypeProjets = typesprojets
 
     elif id.siProjetCppOrPas:
         p = Process(id)
         p.actions(option)
 
 
-def rxbuild(racine=None, groupes=[], options=None):
+def rxbuild(racine=None, groupes=[], options=None, lignecde=True):
+    argligne= ""
+    if lignecde:
+        argligne = argv[1:]
     try:
-        option = OptionBuild(options)
+        option = OptionBuild(options, argligne)
     except  Exception as e:
         print(e)
         exit(3)
+
+    if racine:
+        option.Racine = CmdRad().ResolutionEnv(racine)
+    else:
+        option.Racine = getcwd()
+
     if Target.INSTALL in option.Targets or Target.UNINSTALL in option.Targets:
         # il n'est pas possible d'(de)installer avec Ide ouvert
         attenteArretBds()
-    if racine:
-        option.Racine = CmdRad().ResolutionEnv(racine)
+
     option.AddProjets(groupes)
-    #Recherche des fichiers projets sous le repertoire courant
+    # Recherche des fichiers projets sous le repertoire courant
     if not option.Projets:
-        li=ListeGroupOuProjets()
+        li = ListeGroupOuProjets()
         option.AddProjetsListe(li)
 
     # Type de projets/ packages

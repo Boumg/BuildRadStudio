@@ -1,20 +1,27 @@
 # -*- coding: utf-8 -*-
 #todo Argparse
-import sys
+
 import getopt
-from pathlib import Path
+
 
 from .TypeProjet import *
 
 
 class OptionBuild(object):
 
-    def __init__(self, option: str):
-        self._silecture = False
-        if option:
-            self.LectureOptionsChaine(option)
-        else:
-            self.LectureOptionsLigneCde()
+    def __init__(self,options1=None, options2=[]):
+        self._Racine = None
+        self._Targets = []
+        self._Plateformes = []
+        self._Configs = []
+        self._TypeProjets = []
+        self._Properties = []
+        self._projets = []
+        self.ParserOptions(options1)
+        self.ParserOptions(options2)
+        self.def_options()
+
+
 
     def help(self):
         print("""
@@ -52,24 +59,15 @@ Options de selection des fichiers projets Rad studio
 
 """)
 
-    def __lectureOption(self, listopt):
-        if self._silecture:
-            return
-        self._silecture = True
-
-        self._Racine = None
-        self._Targets = []
-        self._Plateformes = []
-        self._Configs = []
-        self._TypeProjets = []
-        self._Properties = []
-        self._projets = []
-
+    def __lectureOption(self, listopt: list):
         try:
-            opts, self._projets = getopt.getopt(listopt, "hlbiudrectamv",
+            opts,projs = getopt.getopt(listopt, "hlbiudrectamv",
                                                 ["help", "clean", "build", "install", "uninstall", "debug", "release",
                                                  "excecution", "conception", "test", "appli", "make", "valide", "win32",
                                                  "win64", "nopch"])
+            for proj in  projs:
+                self._projets.append(proj)
+
             for opt, bid in opts:
                 if opt in ("--help", "-h"):
                     self.help()
@@ -112,19 +110,7 @@ Options de selection des fichiers projets Rad studio
                 elif opt in "--nopch":
                     self._Properties.append("nopch")
 
-            if len(self._Plateformes) == 0:
-                self._Plateformes = ToutesPlateformes
-            if len(self._Configs) == 0:
-                self._Configs = ToutesConfigs
-            if len(self._TypeProjets) == 0:
-                self._TypeProjets = TousTypeProjets
-            if len(self._Targets) == 0:
-                self._Targets = TousTargets
-            if Target.INSTALL in self._Targets or Target.UNINSTALL in self._Targets:
-                if TypeProjet.PackageIde not in self._TypeProjets:
-                    self._TypeProjets.append(TypeProjet.PackageIde)
-            # if "nopch" not in self._Properties :
-            #    self._Properties.append("nopch")
+
 
         except getopt.GetoptError as err:
             # print help information and exit:
@@ -132,12 +118,30 @@ Options de selection des fichiers projets Rad studio
             self.help()
             raise Exception("Option de compilation invalide")
 
-    def LectureOptionsLigneCde(self):
-        self.__lectureOption(sys.argv[1:])
+    def def_options(self):
+        if len(self._Plateformes) == 0:
+            self._Plateformes = ToutesPlateformes
+        if len(self._Configs) == 0:
+            self._Configs = ToutesConfigs
+        if len(self._TypeProjets) == 0:
+            self._TypeProjets = TousTypeProjets
+        if len(self._Targets) == 0:
+            self._Targets = TousTargets
+        if Target.INSTALL in self._Targets or Target.UNINSTALL in self._Targets:
+            if TypeProjet.PackageIde not in self._TypeProjets:
+                self._TypeProjets.append(TypeProjet.PackageIde)
+        # if "nopch" not in self._Properties :
+        #    self._Properties.append("nopch")
 
-    def LectureOptionsChaine(self, options: str):
-        args = options.split()
-        self.__lectureOption(args)
+    def ParserOptions(self, options):
+        if options:
+            options_li=options
+            if type(options) == str :
+                options_li = options.split()
+
+            if type(options_li) == list and  len(options_li)>0:
+                 self.__lectureOption(options_li)
+
 
     @property
     def TypeProjets(self):

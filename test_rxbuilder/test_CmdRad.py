@@ -3,7 +3,7 @@
 
 import unittest
 
-from rxbuilder.CmdRad import CmdRad
+from rxbuilder.CmdRad import CmdRad,Cde,CdeRad
 
 class TestCmdRad(unittest.TestCase):
     @classmethod
@@ -26,6 +26,17 @@ class TestCmdRad(unittest.TestCase):
     def test_ResolutionEnv(self):
         r=self.cmd.ResolutionEnv("%COMPUTERNAME%")
         self.assertGreater(len(r),0)
-    
+
+class TestCmd(unittest.TestCase):
+    def test_fctcde(self):
+       Cde("dir")
+       Cde("dir", "c:\\")
+
+    def test_fctcdeRad(self):
+       CdeRad("dir")
+       CdeRad("dir", "c:\\")
+
+
+
 if __name__ == '__main__':
      unittest.main()

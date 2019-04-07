@@ -1,20 +1,8 @@
 #-*- coding: utf-8 -*-
 import unittest
-from rxbuilder.Embarcadero import * 
+from rxbuilder.Embarcadero import *
 
 
-
-class TestRegistre(unittest.TestCase):
-    def test_exiteRuche(self):
-        c = Registre("Software")
-        self.assertTrue(c.siExisteRuche())
-        self.assertTrue(c.siExisteRuche('Microsoft'))
-        self.assertFalse(c.siExisteRuche("merdemerde"))
-        b = Registre("merdemerde")
-        self.assertFalse(b.siExisteRuche())
-        d = Registre(DelphiRegPath)
-        self.assertTrue(d.siExisteRuche())
-        #self.assertFalse(d.siExisteRuche("18.0"))
 class TestEmbarcadero(unittest.TestCase):
     def test_getDerniereVersion(self):
         e = Embarcadero() 
@@ -33,18 +21,18 @@ class TestEcritureSuppressionValeur(unittest.TestCase):
 
     @classmethod
     def tearDownClass(cls):
-         c = cls.e.getRucheBDS.getRegistre("Known Packages")
-         c.effacerValeurSiExiste(nomPackage)
+         c = cls.e.getRucheBDS.get_registre("Known Packages")
+         c.effacer_valeur_si_existe(nomPackage)
 
     def test_writedelv(self):
         e = Embarcadero()
-        c = e.getRucheBDS.getRegistre("Known Packages")
+        c = e.getRucheBDS.get_registre("Known Packages")
                 
-        self.assertFalse(c.siExisteValeur(nomPackage))   
-        c.setValeur(nomPackage, "toto")
-        self.assertTrue(c.siExisteValeur(nomPackage))       
-        c.effacerValeur(nomPackage)
-        self.assertFalse(c.siExisteValeur(nomPackage))   
+        self.assertFalse(c.si_existe_valeur(nomPackage))
+        c.set_valeur(nomPackage, "toto")
+        self.assertTrue(c.si_existe_valeur(nomPackage))
+        c.effacer_valeur(nomPackage)
+        self.assertFalse(c.si_existe_valeur(nomPackage))
         
        
 class TestCheckPresencePath(unittest.TestCase):        
@@ -64,11 +52,11 @@ class TestCheckPresencePath(unittest.TestCase):
 
     @classmethod
     def nettoie(cls,subkey_name,value_name):
-        cle = cls.e.getRucheBDS.getRegistre(subkey_name)
-        valeurs = cle.listerValeurs(value_name)
+        cle = cls.e.getRucheBDS.get_registre(subkey_name)
+        valeurs = cle.lister_valeurs(value_name)
         if (cls.chaineTest in valeurs):
             valeurs.remove(cls.chaineTest)
-            cle.setValeur(value_name,";".join(valeurs))
+            cle.set_valeur(value_name, ";".join(valeurs))
 
     
     def test_presence(self):

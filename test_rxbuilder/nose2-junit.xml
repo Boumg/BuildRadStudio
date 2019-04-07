@@ -1,0 +1,173 @@
+<testsuite errors="0" failures="0" name="nose2-junit" skipped="3" tests="56" time="30.545">
+  <testcase classname="test_rxbuilder.test_cmake_util.TestCmake" name="test_get_cmake_cde" time="0.056668">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_cmake_util.TestCmake" name="test_get_ctest_cde" time="0.035874">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_CmdRad.TestCmd" name="test_fctcde" time="0.010281">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_CmdRad.TestCmd" name="test_fctcdeRad" time="0.031275">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_CmdRad.TestCmdRad" name="test_bcc64" time="0.019320">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_CmdRad.TestCmdRad" name="test_msbuild" time="0.058781">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_CmdRad.TestCmdRad" name="test_msbuildErreur" time="0.049428">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_CmdRad.TestCmdRad" name="test_ResolutionEnv" time="0.000000">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_CmdRad.TestCmdRad" name="test_set" time="0.013950">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_CmdWindows.Test_CmdInteractif.InteractiveCommand" name="test_creation" time="0.000000">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_CmdWindows.Test_CmdInteractif.InteractiveCommand" name="test_creation_avec_path" time="0.030973">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_CmdWindows.Test_CmdInteractif.InteractiveCommand" name="test_creation_avec_path2" time="0.000000">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_CmdWindows.Test_CmdInteractif.InteractiveCommand" name="test_creation_et_sortie" time="0.017950">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_CmdWindows.Test_CmdInteractif.InteractiveCommand" name="test_dirs" time="0.034169">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_CmdWindows.Test_CmdInteractif.InteractiveCommand" name="test_kill" time="0.012647">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_CmdWindows.Test_CmdInteractif.InteractiveCommand" name="test_sortie" time="0.016940">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_CmdWindows.test_RegParcours.TestRegistre" name="test_exiteRuche" time="0.000000">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_CmdWindows.test_WinConsole.Test_Winconsole" name="test_something" time="0.000000">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_Embarcadero.TestCheckPresencePath" name="test_absenceAjout" time="0.000000">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_Embarcadero.TestCheckPresencePath" name="test_presence" time="0.000000">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_Embarcadero.TestEcritureSuppressionValeur" name="test_writedelv" time="0.000000">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_Embarcadero.TestEmbarcadero" name="test_getDerniereVersion" time="0.000000">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_IdProjet.TestExtRadStudioProjet" name="testExtension" time="0.000000">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_IdProjet.TestIdProjet" name="testIdWithRepertoireAndName" time="0.000000">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_IdProjet.TestIdProjet" name="testIdWithRerpertoireNone" time="0.000000">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_MsbuildProjet.TestMsProjet" name="testGroup" time="0.034404">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_MsbuildProjet.TestMsProjet" name="testLib" time="0.012228">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_MsbuildProjet.TestMsProjet" name="testPropExecProjet" time="0.030793">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_MsbuildProjet.TestMsProjet" name="testPropLibProjet" time="0.000000">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_MsbuildProjet.TestMsProjet" name="testPropPackageExecProjet" time="0.020520">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_MsbuildProjet.TestMsProjet" name="testPropPackageIdeProjet" time="0.012699">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_MsbuildProjet.TestMsProjet" name="testSousProjets" time="0.000000">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_MsbuildProjet.TestMsProjet" name="testSousProjets2" time="0.000000">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.Test_Options.TestOptions" name="test_AjoutProjet" time="0.000000">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.Test_Options.TestOptions" name="test_erreur" time="0.000000">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.Test_Options.TestOptions" name="test_something" time="0.000000">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_Process.TestProcess" name="testCleanProjetLib" time="0.343985">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_VerifAvantCompilation.TestVerifAvantCompilation" name="test_AttenteBDE" time="0.000000">
+    <skipped />
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_VerifAvantCompilation.TestVerifAvantCompilation" name="test_ProcessAbsent" time="0.011026">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_VerifAvantCompilation.TestVerifAvantCompilation" name="test_ProcessEnCours" time="0.000000">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_VerifAvantCompilation.TestVerifAvantCompilation" name="test_rxbuild_minimum_requis" time="0.000000">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_VerifAvantCompilation.TestcheckVarEnvn" name="test_CleExiste" time="0.000000">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_VerifAvantCompilation.TestcheckVarEnvn" name="test_existeVariableEnv" time="0.000000">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test_VerifAvantCompilation.TestcheckVarEnvn" name="test_PasDeCle" time="0.000000">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test__init__.TesLigneCde" name="test_Racinevide" time="0.000000">
+    <skipped />
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test__init__.TesLigneCde" name="test_vide" time="0.000000">
+    <skipped />
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test__init__.TestProcessMax" name="test_Build_release_win64" time="19.250995">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test__init__.TestProcessMax" name="test_Build_Win32Release" time="0.378535">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test__init__.TestProcessMax" name="test_BuildInstall" time="0.013362">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test__init__.TestProcessMax" name="test_BuildLib" time="1.452078">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test__init__.TestProcessMax" name="test_BuildUnInstall" time="0.024439">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test__init__.TestProcessMax" name="test_cleanAll" time="0.584668">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test__init__.TestProcessMax" name="test_CleanGroup" time="3.294839">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test__init__.TestProcessMax" name="test_cleanRelease" time="0.297366">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test__init__.TestProcessMax" name="test_cleanWin32Release" time="0.140558">
+    <system-out />
+  </testcase>
+  <testcase classname="test_rxbuilder.test__init__.TestProcessMax" name="test_LancementTest" time="4.254337">
+    <system-out />
+  </testcase>
+</testsuite>

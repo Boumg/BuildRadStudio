@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+from subprocess import run, PIPE
 from pathlib import Path
 from .TypeProjet import *
 from .MsbuildProjet import ProjetMsbuild
@@ -11,6 +11,11 @@ from .Options import OptionBuild
 from os import remove
 
 from shutil import rmtree
+
+def si_gtest(test: Path):
+    cde=test.name + " --help"
+    r=run(cde,shell=True, stdout=PIPE, cwd=str(test.parent))
+    return  r.stdout.find(b"Google Test") != -1
 
 def SuppressionRepertoireId(id: IdProjet ):
     rep = id.Repertoire / id.Platform.value / id.Config.value
@@ -29,6 +34,7 @@ def SuppressionFichier(ext: str, id: IdProjet):
 class Process(object):
     def clean(self, id: IdProjet):
         CmdRad().cwd = str(id.Repertoire)
+        print(f"{id.NomCompletStr} /t:Clean /p:Config={id.Config.value} /p:Platform={id.Platform.value}")
         CmdRad().MsBuild(f"{id.NomCompletStr} /t:Clean /p:Config={id.Config.value} /p:Platform={id.Platform.value}")
         SuppressionFichier("stat", id)
         SuppressionFichier("local", id)
@@ -56,21 +62,29 @@ class Process(object):
         if self.siOkdIde:
             print("enregistrePackage:", self.FinalOutput)
             rucheKnownPackage = Embarcadero().getRegistreBDS("Known Packages")
-            rucheKnownPackage.setValeur(self.FinalOutput, self.SanitizedProjectName)
+            rucheKnownPackage.set_valeur(self.FinalOutput, self.SanitizedProjectName)
             self.clearCaches(self.FinalOutputName)
 
     def UnInstall(self, id: IdProjet):
         if self.siOkdIde:
             print("desEnregistrePackage:", self.FinalOutput)
             rucheKnownPackage = Embarcadero().getRegistreBDS("Known Packages")
-            rucheKnownPackage.effacerValeurSiExiste(self.FinalOutput)
+            rucheKnownPackage.effacer_valeur_si_existe(self.FinalOutput)
             self.clearCaches(self.FinalOutputName)
 
     def Valide(self, id: IdProjet):
         if self.siTest:
             cde=id.Repertoire / self.FinalOutput
             CmdRad().cwd = str(cde.parent)
-            CmdRad().Cde(cde.name)
+            if si_gtest(cde):
+                nom_fic=f"{cde.name}_{id.Platform.value }_{id.Config.value }"
+                fic_out=self.option.Racine /  "test-reports" / nom_fic
+                fic_out=fic_out.with_suffix(".xml")
+                outputtest= f" --gtest_output=\"xml:{fic_out}\""
+                CmdRad().Cde(cde.name + outputtest)
+            else:
+                #ce n'est pas un google test
+                CmdRad().Cde(cde.name)
 
     ActionsTarget = {Target.CLEAN: clean,
                      Target.BUILD: Build,
@@ -106,11 +120,12 @@ class Process(object):
 
     def clearCaches(self, nomPackage):
         ruchePackageCache = Embarcadero().getRegistreBDS("Package Cache")
-        ruchePackageCache.effacerCle(nomPackage)
+        ruchePackageCache.effacer_cle(nomPackage)
         ruchePaletteCache = Embarcadero().getRegistreBDS("Palette\\Cache")
-        ruchePaletteCache.effacerCle(nomPackage)
+        ruchePaletteCache.effacer_cle(nomPackage)
 
     def actions(self, option: OptionBuild):
+        self.option =option
         if self.TypeProjet in option.TypeProjets:
             for p in option.Plateformes:
                 for c in option.Configs:

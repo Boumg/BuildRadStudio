@@ -1,122 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import winreg
-
-
-class Registre(object):
-
-    def __init__(self, pathreg, hklm=winreg.HKEY_CURRENT_USER):
-        self._hklm = None
-        self._reg = hklm
-        self._keyR = None
-        self._path = pathreg
-
-    @property
-    def path(self):
-        return self._path
-
-    @path.setter
-    def setPath(self, value):
-        if self._path != value:
-            self._keyR = None
-            self._path = value
-
-    @property
-    def hklm(self):
-        if self._hklm == None:
-            self._hklm = winreg.ConnectRegistry(None, self._reg)
-        return self._hklm
-
-    @property
-    def keyR(self):
-        if self._keyR == None:
-            self._keyR = winreg.OpenKey(self.hklm, self.path, 0, winreg.KEY_ALL_ACCESS)
-        return self._keyR
-
-    NO_DEFAULT = type(str('NO_DEFAULT'), (object,), {})()
-
-    def getValeur(self, name, default=NO_DEFAULT):
-        try:
-            value = winreg.QueryValueEx(self.keyR, name)[0]
-        except WindowsError:
-            if default is self.NO_DEFAULT:
-                raise ValueError("No such registry key", name)
-            value = default
-        return value
-
-    def setValeur(self, name, val, default=NO_DEFAULT):
-        try:
-            winreg.SetValueEx(self.keyR, name, 0, winreg.REG_SZ, val)
-        except WindowsError:
-            if default is self.NO_DEFAULT:
-                raise ValueError("Writing registry key failed ! - ", name)
-
-    def getRuche(self, value):
-        return winreg.OpenKey(self.keyR, value, 0, winreg.KEY_READ)
-
-    def getRegistre(self, value):
-        reg = self._path
-        if reg[-1] != "\\":
-            reg += "\\"
-        return Registre(reg + value, self._reg)
-
-    def siExisteRuche(self, value=""):
-        try:
-            self.getRuche(value)
-        except WindowsError:
-            return False
-        return True
-
-    def siExisteValeur(self, name):
-        try:
-            self.value = winreg.QueryValueEx(self.keyR, name)[0]
-        except WindowsError:
-            return False
-        return True
-
-    def effacerValeur(self, name):
-        try:
-            winreg.DeleteValue(self.keyR, name)
-        except WindowsError:
-            raise ValueError("Deleting registry key failed ! - ", name)
-
-    def effacerValeurSiExiste(self, name):
-        if self.siExisteValeur(name):
-            self.effacerValeur(name)
-
-    def ListeSubKey(self, nb_subk):
-        liste_subk = []
-        indexSk = 0
-        while indexSk < nb_subk:
-            liste_subk.append(winreg.EnumKey(self.keyR, indexSk))
-            indexSk += 1
-        return liste_subk
-
-    def effacerCle(self, nomCle):
-        if self.siExisteRuche(nomCle):
-            subKey = self.getRegistre(nomCle)
-            nb_subk, nb_v, t = winreg.QueryInfoKey(subKey.keyR)
-            if (nb_subk > 0):
-                for subkname in subKey.ListeSubKey(nb_subk):
-                    subKey.effacerCle(subkname)
-            winreg.DeleteKey(self.keyR, nomCle)
-
-    '''            
-    def expand(obj):        
-        # expand obj
-        return obj
-    '''
-
-    def listerValeurs(self, value_name):
-        valeurs = self.getValeur(value_name)
-        liste = valeurs.split(';')
-        return liste
-
-    def ajouterPath(self, value_name, path):
-        oldValue = self.getValeur(value_name)
-        newValue = oldValue + ";" + path
-        self.setValeur(value_name, newValue)
-
+from .CmdWindows import Registre
 
 """Dectection des versions installés de Delphi"""
 DelphiRegPath = 'Software\\Embarcadero\\BDS\\'
@@ -156,7 +40,7 @@ class Embarcadero(object):
 
     @classmethod
     def getVersions(c):
-        return [a for a in sorted(VersionRad.items()) if c._DelphiRuche.siExisteRuche(a[0] + "\\C++")]
+        return [a for a in sorted(VersionRad.items()) if c._DelphiRuche.si_existe_ruche(a[0] + "\\C++")]
 
     @classmethod
     def getDerniereVersion(c):
@@ -167,14 +51,14 @@ class Embarcadero(object):
 
     def __init__(self):
         self.Version = self.getDerniereVersion()
-        self._RucheVersion = self._DelphiRuche.getRegistre(self.Version[0])
+        self._RucheVersion = self._DelphiRuche.get_registre(self.Version[0])
 
     def getRegistreBDS(self, nomSsRuche):
-        return self.getRucheBDS.getRegistre(nomSsRuche)
+        return self.getRucheBDS.get_registre(nomSsRuche)
 
     @property
     def RootDir(self):
-        return self._RucheVersion.getValeur("RootDir")
+        return self._RucheVersion.get_valeur("RootDir")
 
     @property
     def Bin(self):
@@ -194,17 +78,17 @@ class Embarcadero(object):
             return v
 
     def addReg(self, subkey_name, value_name, path):
-        cle = self.getRucheBDS.getRegistre(subkey_name)
-        valeurs = cle.listerValeurs(value_name)
+        cle = self.getRucheBDS.get_registre(subkey_name)
+        valeurs = cle.lister_valeurs(value_name)
         if not (path in valeurs):
-            cle.ajouterPath(value_name, path)
+            cle.ajouter_chemin(value_name, path)
             # returnS uniquement utilise par les unittests
             return False
         return True
 
     def checkReg(self, subkey_name, value_name, path):
-        cle = self.getRucheBDS.getRegistre(subkey_name)
-        valeurs = cle.listerValeurs(value_name)
+        cle = self.getRucheBDS.get_registre(subkey_name)
+        valeurs = cle.lister_valeurs(value_name)
         if not (path in valeurs):
             return False
         return True
