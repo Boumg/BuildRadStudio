@@ -25,6 +25,7 @@ from .VerifAvantCompilation import attenteArretBds, checkVarEnv, suppression_rep
     rxbuild_minimum_requis
 from .cmake_util import  get_cmake_cde, BuildCmakeVS, CtestCmakeVS
 
+
 def ListeSelctionFichiers(pattern):
     c = Path.cwd()
     return [str(f) for f in c.glob(f"*.{pattern.value}")]
@@ -37,13 +38,13 @@ def ListeProjets():
 def ListeGroupOuProjets():
     li = ListeSelctionFichiers(RXSuffix.GROUP)
     if li:
-        return li;
-    return ListeProjets();
+        return li
+    return ListeProjets()
 
 
-def ParcoursGroup(groupe, id: IdProjet, option: OptionBuild):
+def ParcoursGroup(groupe, idProj: IdProjet, option: OptionBuild):
     for e in groupe:
-        p = Process(IdProjet(id.Repertoire / e))
+        p = Process(IdProjet(idProj.Repertoire / e))
         p.actions(option)
 
 
@@ -78,11 +79,12 @@ def rxbuildProjet(id: IdProjet, option: OptionBuild):
 
 def rxbuild(racine=None, groupes=[], options=None, lignecde=True):
     argligne= ""
+    option = None
     if lignecde:
         argligne = argv[1:]
     try:
         option = OptionBuild(options, argligne)
-    except  Exception as e:
+    except Exception as e:
         print(e)
         exit(3)
 
