@@ -17,6 +17,7 @@ pipeline {
             steps {
                  dir ('test_rxbuilder') {
                     bat 'nose2 --plugin nose2.plugins.junitxml --junit-xml'
+                    junit 'nose2-junit.xml'
                  }
             }
         }
