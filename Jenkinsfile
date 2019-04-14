@@ -7,6 +7,7 @@ pipeline {
     stages {
         stage('Test') { 
             steps {
+                bat 'echo "is new"'
                 bat 'echo %WORKSPACE%'
                 bat 'echo Y | pip uninstall rxbuilder'
                 bat 'pip install -r requirements.txt'
