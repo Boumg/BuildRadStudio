@@ -7,12 +7,12 @@ pipeline {
     stages {
         stage('Test') { 
             steps {
-                sh 'echo %WORKSPACE%'
-                sh 'echo Y | pip uninstall rxbuilder'
-                sh 'pip install -r requirements.txt'
-                sh 'python setup.py install'
+                bat 'echo %WORKSPACE%'
+                bat 'echo Y | pip uninstall rxbuilder'
+                bat 'pip install -r requirements.txt'
+                bat 'python setup.py install'
                  dir ('test_rxbuilder') {
-                    sh 'nose2 --plugin nose2.plugins.junitxml --junit-xml'
+                    bat 'nose2 --plugin nose2.plugins.junitxml --junit-xml'
                  }
             }
         }
