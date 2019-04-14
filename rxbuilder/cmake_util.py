@@ -5,8 +5,10 @@ from shutil import which
 from .CmdRad import Cde
 from .VerifAvantCompilation import checkVarEnv, suppression_repertoire
 
+
 def _get_cmake_dir():
     return checkVarEnv("PROGRAMFILES") / r"cmake/bin"
+
 
 def _get_cmake():
     """
@@ -15,12 +17,14 @@ def _get_cmake():
     """
     return which("cmake", path=str(_get_cmake_dir()))
 
+
 def _get_ctest():
     """
       recherche de l'executable ctest
         :return: ctest executable
     """
     return which("ctest", path=str(_get_cmake_dir()))
+
 
 def is_cmake():
     return _get_cmake() != None
@@ -37,6 +41,7 @@ def get_ctest_cde():
     else:
         cmake_dir=_get_cmake_dir()
         raise Exception(f" Pas de commande cmake , sous le repertoire {cmake_dir}-> installer cmake ")
+
 
 def get_cmake_cde():
     """
